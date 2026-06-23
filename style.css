@@ -178,8 +178,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(8, 102, 75, 0.65) 0%, rgba(3, 31, 48, 0.85) 100%);
-    backdrop-filter: blur(4px);
+    background: linear-gradient(135deg, rgba(8, 102, 75, 0.45) 0%, rgba(3, 31, 48, 0.65) 100%);
+    backdrop-filter: blur(2px);
 }
 
 .hero-content {
