@@ -83,6 +83,11 @@
                             <a class="nav-link" href="contact.html">Contact Us</a>
                         </li>
                     </ul>
+                    <div class="d-lg-none d-flex flex-column gap-2 mt-3 mb-2">
+                        <a href="book-search.html" class="btn-conxora text-center">BOOK SEARCH</a>
+                        <a href="book-an-appointment.html" class="btn-conxora text-center">BOOK APPOINTMENT</a>
+                        <a href="book-a-demo.html" class="btn-conxora text-center">BOOK DEMO</a>
+                    </div>
                 </div>
                 <div class="d-none d-lg-flex gap-2">
                     <a href="book-search.html" class="btn-conxora">BOOK SEARCH</a>
@@ -92,147 +97,79 @@
             </nav>
         </div>
     </header>
-
 <style>
     .premium-page-wrapper {
         background-color: #f8f9fa;
         min-height: calc(100vh - 200px);
     }
-    .premium-card-shadow {
-        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    .info-section {
+        background-color: white;
+        padding: 60px 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
-    .premium-left-panel {
-        background: linear-gradient(135deg, #08664b, #054834);
-        overflow: hidden;
+    .feature-icon {
+        color: var(--primary-orange);
+        font-size: 2.5rem;
+        margin-bottom: 20px;
     }
-    .panel-bg-overlay {
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
-        transform: rotate(30deg);
-        pointer-events: none;
-    }
-    .premium-input {
-        background-color: #f8f9fa;
-        border: 1px solid #e9ecef;
-        transition: all 0.3s ease;
-    }
-    .premium-input:focus {
-        background-color: #fff;
-        border-color: #08664b;
-        box-shadow: 0 0 0 0.25rem rgba(8, 102, 75, 0.1);
-    }
-    .premium-submit-btn {
-        transition: all 0.3s ease;
-    }
-    .premium-submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(232, 97, 44, 0.3) !important;
+    .demo-heading {
+        color: var(--primary-green);
+        font-weight: 800;
+        margin-bottom: 30px;
     }
 </style>
-<!-- Main -->
 <main class="premium-page-wrapper py-5">
     <div class="container">
-        <div class="row g-0 premium-card-shadow rounded-4 overflow-hidden">
-            <!-- Left Info Panel -->
-            <div class="col-lg-5 premium-left-panel p-5 text-white d-flex flex-column justify-content-center position-relative">
-                <div class="panel-bg-overlay"></div>
-                <div class="position-relative z-index-1">
-                    <span class="badge bg-white text-success mb-3 px-3 py-2 rounded-pill fw-bold" style="font-size: 0.8rem; letter-spacing: 1px;">PRODUCT DEMO</span>
-                    <h1 class="display-5 fw-bold mb-4">Book A Demo</h1>
-                    <p class="fs-5 text-white-50 mb-4">Schedule a live demo to see how our databases and tools can streamline your transfer pricing benchmarking and compliance workflows.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="info-section text-center">
+                    <h1 class="display-4 demo-heading">Experience GulfTP in Action</h1>
+                    <p class="lead text-muted mb-5">Discover how our comprehensive transfer pricing databases and cutting-edge analytical tools can transform your benchmarking process.</p>
                     
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
-                            <i class="fa-solid fa-calendar-check"></i>
+                    <div class="row g-4 text-start mb-5">
+                        <div class="col-md-4">
+                            <div class="p-4 border rounded-3 h-100 bg-light">
+                                <i class="fa-solid fa-database feature-icon"></i>
+                                <h4 class="fw-bold text-dark mb-3">Comprehensive Data</h4>
+                                <p class="text-muted">Access the most reliable and extensive Transfer Pricing data across the GCC, covering companies, interest rates, services, and IP licensing.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h6 class="mb-0 fw-bold">Flexible Timing</h6>
-                            <small class="text-white-50">Choose a slot that works for you</small>
+                        <div class="col-md-4">
+                            <div class="p-4 border rounded-3 h-100 bg-light">
+                                <i class="fa-solid fa-chart-line feature-icon"></i>
+                                <h4 class="fw-bold text-dark mb-3">Advanced Analytics</h4>
+                                <p class="text-muted">Utilize our proprietary tools for DEMPE analysis and credit rating estimation to strengthen your compliance documentation.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
-                            <i class="fa-solid fa-comments"></i>
-                        </div>
-                        <div>
-                            <h6 class="mb-0 fw-bold">Expert Consultation</h6>
-                            <small class="text-white-50">Speak with transfer pricing specialists</small>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <div>
-                            <h6 class="mb-0 fw-bold">Confidential</h6>
-                            <small class="text-white-50">Your business details are secure</small>
+                        <div class="col-md-4">
+                            <div class="p-4 border rounded-3 h-100 bg-light">
+                                <i class="fa-solid fa-bolt feature-icon"></i>
+                                <h4 class="fw-bold text-dark mb-3">Seamless Workflow</h4>
+                                <p class="text-muted">Experience an intuitive platform designed specifically to streamline your transfer pricing searches and save you valuable time.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center pt-3 border-top border-light border-opacity-25">
-                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <h6 class="mb-0 fw-bold">WhatsApp Support</h6>
-                            <small class="text-white-50">Quick questions? Message us on WhatsApp</small>
+                    
+                    <div class="bg-light p-5 rounded-4 mt-5 text-start border">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h3 class="fw-bold text-dark mb-3">Ready to see it live?</h3>
+                                <p class="text-muted fs-5 mb-0">Get in touch with our team to schedule a personalized walkthrough of the GulfTP platform tailored to your specific benchmarking needs.</p>
+                            </div>
+                            <div class="col-md-4 text-md-end mt-4 mt-md-0">
+                                <a href="contact.html" class="btn btn-lg w-100 fw-bold text-white" style="background-color: var(--primary-orange); border-radius: 12px; padding: 15px 30px;">Contact Us <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Right Form Panel -->
-            <div class="col-lg-7 bg-white p-5">
-                <h3 class="fw-bold mb-4" style="color: var(--primary-green);">Your Details</h3>
-                <form id="appointmentForm" method="POST">
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Full Name <span class="text-danger">*</span></label>
-                            <input type="text" name="firstName" class="form-control form-control-lg premium-input" placeholder="Your full name" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Email Address <span class="text-danger">*</span></label>
-                            <input type="email" name="email" class="form-control form-control-lg premium-input" placeholder="your.email@example.com" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Organisation <span class="text-danger">*</span></label>
-                            <input type="text" name="company" class="form-control form-control-lg premium-input" placeholder="Your organisation name" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Mobile Number <span class="text-danger">*</span></label>
-                            <input type="tel" name="phone" class="form-control form-control-lg premium-input" placeholder="+971 50 123 4567" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" id="termsAgreeAppt" required>
-                        <label class="form-check-label text-secondary" for="termsAgreeAppt">
-                            I agree to the GulfTP <a href="terms-of-use.html" class="text-decoration-none fw-semibold" style="color: var(--primary-orange);">Terms and Conditions</a>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-lg w-100 fw-bold text-white shadow-sm premium-submit-btn" style="background: linear-gradient(135deg, var(--primary-orange), #e8612c); border: none; padding: 15px 0;">
-                        Request Demo <i class="fa-solid fa-arrow-right ms-2"></i>
-                    </button>
-
-                    <div class="alert alert-success mt-4 text-center bg-white text-success border-0" id="successMessage" style="display: none;">
-                        <i class="fa-solid fa-check-circle me-2"></i> Your appointment request has been sent successfully!
-                    </div>
-                    <div class="alert alert-danger mt-4 text-center bg-white text-danger border-0" id="errorMessage" style="display: none;">
-                        <i class="fa-solid fa-exclamation-circle me-2"></i> Failed to send your request. Please try again.
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
 </main>
-
-<!-- Footer -->
-<!-- Unique Futuristic Footer -->
-    <footer class="footer position-relative">
+<footer class="footer position-relative">
         <!-- Abstract SVG Wave -->
         <div class="footer-wave">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
