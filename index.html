@@ -95,21 +95,70 @@
         </div>
     </header>
 
-    <!-- Conxora Style Hero Section -->
-    <section class="hero-section">
+    <!-- Premium International Hero Section -->
+    <section class="hero-section position-relative overflow-hidden">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="hero-badge animate-up"><i class="fa-solid fa-chart-pie me-2"></i> GCC Regional Data</div>
-                    <h1 class="hero-title animate-up delay-1">Unlock Over <br><span class="text-orange">100,000+</span><br> Comparable Companies</h1>
-                    <p class="hero-subtitle animate-up delay-2">GulfTP is the premier transfer pricing benchmarking database built entirely for the GCC region. Elevate your financial strategies with high-precision data.</p>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="hero-badge animate-up mb-4 d-inline-flex align-items-center bg-white bg-opacity-10 text-white px-3 py-2 rounded-pill border border-white border-opacity-25" style="backdrop-filter: blur(10px);">
+                        <i class="fa-solid fa-chart-pie me-2 text-warning"></i> <span class="fw-semibold text-uppercase" style="font-size: 0.85rem; letter-spacing: 1px;">The Premier GCC Database</span>
+                    </div>
+                    <h1 class="hero-title animate-up delay-1 text-white fw-bold mb-4" style="font-size: 3.8rem; line-height: 1.15; letter-spacing: -1px;">
+                        Master Your <br><span style="color: var(--primary-orange);">Transfer Pricing</span><br> Strategies
+                    </h1>
+                    <p class="hero-subtitle animate-up delay-2 text-white text-opacity-75 mb-5 fs-5" style="max-width: 540px; line-height: 1.7;">
+                        Access the most comprehensive, high-precision benchmarking database built entirely for the GCC region. Elevate your compliance and financial strategies with ease.
+                    </p>
                     <div class="hero-buttons animate-up delay-3 d-flex flex-wrap gap-3">
-                        <a href="book-search.html" class="btn-conxora btn-orange px-4 py-3">Request a GCC Benchmark Search</a>
-                        <a href="about.html" class="btn-conxora btn-outline px-4 py-3">Learn More</a>
+                        <a href="book-search.html" class="btn-conxora btn-orange px-4 py-3 shadow-lg"><i class="fa-solid fa-magnifying-glass me-2"></i> Request Benchmark</a>
+                        <a href="about.html" class="btn-conxora btn-outline px-4 py-3" style="border-color: rgba(255,255,255,0.3);"><i class="fa-solid fa-play me-2"></i> Explore Platform</a>
+                    </div>
+                    
+                    <div class="mt-5 d-flex align-items-center gap-3 animate-up delay-3 pt-4 border-top border-white border-opacity-10" style="max-width: 400px;">
+                        <div class="d-flex" style="margin-left: 10px;">
+                            <img src="https://ui-avatars.com/api/?name=U+A&background=f59120&color=fff" class="rounded-circle border border-2 border-white" width="45" height="45" alt="User" style="margin-left: -10px;">
+                            <img src="https://ui-avatars.com/api/?name=O+M&background=08664b&color=fff" class="rounded-circle border border-2 border-white" width="45" height="45" alt="User" style="margin-left: -15px;">
+                            <img src="https://ui-avatars.com/api/?name=S+A&background=random&color=fff" class="rounded-circle border border-2 border-white" width="45" height="45" alt="User" style="margin-left: -15px;">
+                        </div>
+                        <div class="text-white">
+                            <div class="fw-bold fs-5">Trusted by 500+</div>
+                            <div class="small text-white text-opacity-75">Multinational Enterprises</div>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="col-lg-6 d-none d-lg-block position-relative">
+                     <div class="position-relative animate-up delay-2">
+                         <img src="homepageimage.webp" alt="GulfTP Dashboard" class="img-fluid rounded-4 shadow-lg" style="border: 1px solid rgba(255,255,255,0.15); border-radius: 20px;">
+                         
+                         <!-- Floating Glass Card 1 -->
+                         <div class="position-absolute p-3 rounded-4 shadow-lg" style="background: rgba(255,255,255,0.95); backdrop-filter: blur(15px); bottom: -30px; left: -40px; z-index: 3; max-width: 200px; border: 1px solid rgba(255,255,255,0.5);">
+                             <div class="d-flex align-items-center gap-3 mb-2">
+                                 <div class="p-2 rounded text-white" style="background: var(--primary-green); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                                 <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">Data Accuracy</h6>
+                             </div>
+                             <h3 class="mb-0 fw-bold" style="color: var(--primary-green);">100%</h3>
+                         </div>
+
+                         <!-- Floating Glass Card 2 -->
+                         <div class="position-absolute p-3 rounded-4 shadow-lg" style="background: rgba(255,255,255,0.95); backdrop-filter: blur(15px); top: -20px; right: -20px; z-index: 3; max-width: 220px; border: 1px solid rgba(255,255,255,0.5);">
+                             <div class="d-flex align-items-center gap-3 mb-2">
+                                 <div class="p-2 rounded text-white" style="background: var(--primary-orange); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-building"></i></div>
+                                 <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">GCC Coverage</h6>
+                             </div>
+                             <h3 class="mb-0 fw-bold" style="color: var(--primary-orange);">100,000+</h3>
+                         </div>
+                     </div>
+                </div>
             </div>
+        </div>
+        
+        <!-- Bottom Curve/Wave -->
+        <div class="position-absolute bottom-0 w-100" style="z-index: 10;">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%; height: auto;">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#f8fafc"></path>
+            </svg>
         </div>
     </section>
 
