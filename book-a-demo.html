@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Demo - GulfTP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+    /* ── Custom Dropdown Arrow ── */
+.navbar-nav .nav-link.dropdown-toggle::after { display: none; }
+.navbar-nav .nav-link.dropdown-toggle .dd-arrow { display: inline-flex; align-items: center; margin-left: 5px; transition: transform 0.28s ease; }
+.navbar-nav .nav-link.dropdown-toggle .dd-arrow svg { width: 12px; height: 12px; stroke: currentColor; fill: none; }
+.navbar-nav .nav-item.dropdown.show > .nav-link .dd-arrow { transform: rotate(180deg); }
+
+/* ── Underline for Solutions & Regulation ── */
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle { position: relative; }
+.navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle::before { content:''; position:absolute; bottom:0; background-color:#f39223; transform:scaleX(0); transition:transform 0.3s; }
+.navbar-nav .nav-item.dropdown:hover > .nav-link.dropdown-toggle::before,
+.navbar-nav .nav-item.dropdown.show  > .nav-link.dropdown-toggle::before { transform: translateX(-50%) scaleX(1); }
+    </style>
+<!-- Top Bar (Conxora Style) -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <ul class="top-info">
+                        <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuristic Navbar (Conxora Style) -->
+    <header class="navbar-custom sticky-top">
+        <div class="container-fluid px-xl-5">
+            <nav class="navbar navbar-expand-lg py-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="GulfTP" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" style="font-weight: 600;">Solutions <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                            <ul class="dropdown-menu" style="min-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="gulf-company-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-building me-3" style="color: #f39223;"></i>Gulf Company Database</a></li>
+                                <li><a class="dropdown-item" href="interest-rates-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-chart-line me-3" style="color: #f39223;"></i>Interest Rates Database</a></li>
+                                <li><a class="dropdown-item" href="services-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-server me-3" style="color: #f39223;"></i>Services Database</a></li>
+                                <li><a class="dropdown-item" href="ip-licensing-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-file-contract me-3" style="color: #f39223;"></i>IP Licensing Database</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">Regulation <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="uae-transfer-pricing.html">United Arab Emirates</a></li>
+                                <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html">Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="qatar-transfer-pricing.html">Qatar</a></li>
+                                <li><a class="dropdown-item" href="bahrain-transfer-pricing.html">Bahrain</a></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html">Egypt</a></li>
+                                <li><a class="dropdown-item" href="oman-transfer-pricing.html">Oman</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex gap-2">
+                    <a href="book-search.html" class="btn-conxora">BOOK SEARCH</a>
+                    <a href="book-an-appointment.html" class="btn-conxora">BOOK APPOINTMENT</a>
+                    <a href="book-a-demo.html" class="btn-conxora">BOOK DEMO</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<style>
+    .premium-page-wrapper {
+        background-color: #f8f9fa;
+        min-height: calc(100vh - 200px);
+    }
+    .premium-card-shadow {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    .premium-left-panel {
+        background: linear-gradient(135deg, #08664b, #054834);
+        overflow: hidden;
+    }
+    .panel-bg-overlay {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+        transform: rotate(30deg);
+        pointer-events: none;
+    }
+    .premium-input {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+    .premium-input:focus {
+        background-color: #fff;
+        border-color: #08664b;
+        box-shadow: 0 0 0 0.25rem rgba(8, 102, 75, 0.1);
+    }
+    .premium-submit-btn {
+        transition: all 0.3s ease;
+    }
+    .premium-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(232, 97, 44, 0.3) !important;
+    }
+</style>
+<!-- Main -->
+<main class="premium-page-wrapper py-5">
+    <div class="container">
+        <div class="row g-0 premium-card-shadow rounded-4 overflow-hidden">
+            <!-- Left Info Panel -->
+            <div class="col-lg-5 premium-left-panel p-5 text-white d-flex flex-column justify-content-center position-relative">
+                <div class="panel-bg-overlay"></div>
+                <div class="position-relative z-index-1">
+                    <span class="badge bg-white text-success mb-3 px-3 py-2 rounded-pill fw-bold" style="font-size: 0.8rem; letter-spacing: 1px;">PRODUCT DEMO</span>
+                    <h1 class="display-5 fw-bold mb-4">Book A Demo</h1>
+                    <p class="fs-5 text-white-50 mb-4">Schedule a live demo to see how our databases and tools can streamline your transfer pricing benchmarking and compliance workflows.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Flexible Timing</h6>
+                            <small class="text-white-50">Choose a slot that works for you</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Expert Consultation</h6>
+                            <small class="text-white-50">Speak with transfer pricing specialists</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Confidential</h6>
+                            <small class="text-white-50">Your business details are secure</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center pt-3 border-top border-light border-opacity-25">
+                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">WhatsApp Support</h6>
+                            <small class="text-white-50">Quick questions? Message us on WhatsApp</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Form Panel -->
+            <div class="col-lg-7 bg-white p-5">
+                <h3 class="fw-bold mb-4" style="color: var(--primary-green);">Your Details</h3>
+                <form id="appointmentForm" method="POST">
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" name="firstName" class="form-control form-control-lg premium-input" placeholder="Your full name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" name="email" class="form-control form-control-lg premium-input" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Organisation <span class="text-danger">*</span></label>
+                            <input type="text" name="company" class="form-control form-control-lg premium-input" placeholder="Your organisation name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Mobile Number <span class="text-danger">*</span></label>
+                            <input type="tel" name="phone" class="form-control form-control-lg premium-input" placeholder="+971 50 123 4567" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="termsAgreeAppt" required>
+                        <label class="form-check-label text-secondary" for="termsAgreeAppt">
+                            I agree to the GulfTP <a href="terms-of-use.html" class="text-decoration-none fw-semibold" style="color: var(--primary-orange);">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-lg w-100 fw-bold text-white shadow-sm premium-submit-btn" style="background: linear-gradient(135deg, var(--primary-orange), #e8612c); border: none; padding: 15px 0;">
+                        Request Demo <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+
+                    <div class="alert alert-success mt-4 text-center bg-white text-success border-0" id="successMessage" style="display: none;">
+                        <i class="fa-solid fa-check-circle me-2"></i> Your appointment request has been sent successfully!
+                    </div>
+                    <div class="alert alert-danger mt-4 text-center bg-white text-danger border-0" id="errorMessage" style="display: none;">
+                        <i class="fa-solid fa-exclamation-circle me-2"></i> Failed to send your request. Please try again.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<!-- Unique Futuristic Footer -->
+    <footer class="footer position-relative">
+        <!-- Abstract SVG Wave -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L48 10.7C96 21.3 192 42.7 288 53.3C384 64 480 64 576 53.3C672 42.7 768 21.3 864 16C960 10.7 1056 21.3 1152 37.3C1248 53.3 1344 74.7 1392 85.3L1440 96V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="#0b1120"/>
+            </svg>
+        </div>
+        
+        <div class="container position-relative z-index-1">
+            <div class="row pt-5 pb-4 g-5">
+                <!-- Branding and Newsletter -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <a href="index.html" class="d-inline-block mb-4">
+                        <img src="Gulf_TP_Footer_Logo_White.webp" alt="GulfTP" style="height: 55px; object-fit: contain;">
+                    </a>
+                    <p class="pe-lg-5 mb-4 text-light opacity-75">GulfTP is the definitive transfer pricing database for the GCC region, providing reliable data for multinational enterprises and tax professionals.</p>
+                    
+                    <!-- Glowing Newsletter Signup -->
+                    <div class="footer-newsletter mt-4">
+                        <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
+                        <form ng-submit="subscribeNewsletter()" class="position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" ng-model="userEmail" required>
+                            <button class="btn footer-submit-btn" type="submit">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Links Columns -->
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Solutions</h5>
+                    <a href="services-database.html" class="footer-link">Services Database</a>
+                    <a href="interest-rates-database.html" class="footer-link">Interest Rates</a>
+                    <a href="ip-licensing-database.html" class="footer-link">IP Licensing</a>
+                    <a href="gulf-company-database.html" class="footer-link">Gulf Companies</a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <a href="book-search.html" class="footer-link">Book a Search</a>
+                    <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
+                    <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
+                    
+                    <div class="social-icons-modern">
+                        <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gulftp?igsh=b3dybTE2OXFoNnIx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gulf-tp/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    &copy; 2026 GulfTP. All Rights Reserved. Built for the Future.
+                </div>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="mx-2 opacity-50">|</span>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const form = this;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const successMsg = document.getElementById('successMessage');
+        const errorMsg = document.getElementById('errorMessage');
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+
+        fetch('submit-form-simple.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Request Demo <i class="fa-solid fa-arrow-right ms-2"></i>';
+            
+            if (result.success) {
+                successMsg.style.display = 'block';
+                form.reset();
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 5000);
+            } else {
+                errorMsg.innerHTML = '<i class="fa-solid fa-exclamation-circle me-2"></i> ' + (result.error || 'Failed to send your request. Please try again.');
+                errorMsg.style.display = 'block';
+            }
+        })
+        .catch(error => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Request Demo <i class="fa-solid fa-arrow-right ms-2"></i>';
+            errorMsg.innerHTML = '<i class="fa-solid fa-exclamation-circle me-2"></i> Network error. Please try again.';
+            errorMsg.style.display = 'block';
+            console.error('Error:', error);
+        });
+    });
+</script>
+</body>
+</html>
