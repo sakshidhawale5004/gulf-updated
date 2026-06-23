@@ -102,14 +102,41 @@
         background-color: #f8f9fa;
         min-height: calc(100vh - 200px);
     }
-    .info-section {
-        background-color: white;
-        padding: 60px 40px;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        margin-top: 40px;
-        margin-bottom: 40px;
+    .premium-card-shadow {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     }
+    .premium-left-panel {
+        background: linear-gradient(135deg, #08664b, #054834);
+        overflow: hidden;
+    }
+    .panel-bg-overlay {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+        transform: rotate(30deg);
+        pointer-events: none;
+    }
+    .premium-input {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+    .premium-input:focus {
+        background-color: #fff;
+        border-color: #08664b;
+        box-shadow: 0 0 0 0.25rem rgba(8, 102, 75, 0.1);
+    }
+    .premium-submit-btn {
+        transition: all 0.3s ease;
+    }
+    .premium-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(232, 97, 44, 0.3) !important;
+    }
+    
     .feature-icon {
         color: var(--primary-orange);
         font-size: 2.5rem;
@@ -143,21 +170,100 @@
 </style>
 <main class="premium-page-wrapper py-5">
     <div class="container">
-        <!-- Short Info (Hero Summary) -->
-        <div class="row justify-content-center mb-4">
-            <div class="col-lg-10 text-center">
-                <h1 class="display-4 demo-heading">See GulfTP in Action</h1>
-                <p class="lead text-muted px-md-5">GulfTP is the definitive transfer pricing platform for the GCC. We provide accurate, localized benchmarking data alongside powerful analytical tools, empowering professionals to stay compliant and make data-driven decisions faster.</p>
+        
+        <!-- Top Section: Form + Short Info -->
+        <div class="row g-0 premium-card-shadow rounded-4 overflow-hidden mb-5">
+            <!-- Left Info Panel -->
+            <div class="col-lg-5 premium-left-panel p-5 text-white d-flex flex-column justify-content-center position-relative">
+                <div class="panel-bg-overlay"></div>
+                <div class="position-relative z-index-1">
+                    <span class="badge bg-white text-success mb-3 px-3 py-2 rounded-pill fw-bold" style="font-size: 0.8rem; letter-spacing: 1px;">SEE IT LIVE</span>
+                    <h1 class="display-5 fw-bold mb-4">Book A Demo</h1>
+                    <p class="fs-5 text-white-50 mb-4">GulfTP is the definitive transfer pricing platform for the GCC. Schedule a live demo to see how our databases and tools can streamline your transfer pricing benchmarking and compliance workflows.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-0">Built for the GCC</h6>
+                            <small class="text-white-50">Localized data you won't find anywhere else</small>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-0">Advanced Analytics</h6>
+                            <small class="text-white-50">Includes DEMPE & Credit Rating tools</small>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center">
+                        <div class="icon-box bg-white text-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-0">Trusted by Experts</h6>
+                            <small class="text-white-50">Relied upon by 100+ professionals</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Form Panel -->
+            <!-- Right Form Panel -->
+            <div class="col-lg-7 bg-white p-5">
+                <h3 class="fw-bold mb-4" style="color: var(--primary-green);">Request a Demo</h3>
+                <form id="appointmentForm" method="POST">
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" name="firstName" class="form-control form-control-lg premium-input" placeholder="Your full name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" name="email" class="form-control form-control-lg premium-input" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Organisation <span class="text-danger">*</span></label>
+                            <input type="text" name="company" class="form-control form-control-lg premium-input" placeholder="Your organisation name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Mobile Number <span class="text-danger">*</span></label>
+                            <input type="tel" name="phone" class="form-control form-control-lg premium-input" placeholder="+971 50 123 4567" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="termsAgreeAppt" required>
+                        <label class="form-check-label text-secondary" for="termsAgreeAppt">
+                            I agree to the GulfTP <a href="terms-of-use.html" class="text-decoration-none fw-semibold" style="color: var(--primary-orange);">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-lg w-100 fw-bold text-white shadow-sm premium-submit-btn" style="background: linear-gradient(135deg, var(--primary-orange), #e8612c); border: none; padding: 15px 0;">
+                        Submit Request <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+
+                    <div class="alert alert-success mt-4 text-center bg-white text-success border-0" id="successMessage" style="display: none;">
+                        <i class="fa-solid fa-check-circle me-2"></i> Your appointment request has been sent successfully!
+                    </div>
+                    <div class="alert alert-danger mt-4 text-center bg-white text-danger border-0" id="errorMessage" style="display: none;">
+                        <i class="fa-solid fa-exclamation-circle me-2"></i> Failed to send your request. Please try again.
+                    </div>
+                </form>
             </div>
         </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="info-section">
-                    
-                    <!-- More Info: Core Offerings -->
+        
+        <!-- Bottom Section: More Info (Core Offerings) -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-12">
+                <div class="bg-white p-5 rounded-4 premium-card-shadow">
                     <h3 class="section-title text-center">Everything You Need in One Platform</h3>
-                    <div class="row g-4 text-start mb-5">
+                    <div class="row g-4 text-start mt-2">
                         <div class="col-md-6">
                             <div class="d-flex p-4 border rounded-3 h-100 bg-light align-items-start">
                                 <i class="fa-solid fa-building feature-icon me-4 mt-1" style="font-size: 2rem;"></i>
@@ -195,50 +301,10 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- More Info: Why Choose GulfTP -->
-                    <div class="mt-5 pt-4 border-top">
-                        <h3 class="section-title">Why Choose GulfTP?</h3>
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li class="d-flex mb-3">
-                                        <i class="fa-solid fa-check text-success me-3 mt-1"></i>
-                                        <span class="text-muted"><strong>Built for the GCC:</strong> Specialized localized data you won't find on global generic databases.</span>
-                                    </li>
-                                    <li class="d-flex mb-3">
-                                        <i class="fa-solid fa-check text-success me-3 mt-1"></i>
-                                        <span class="text-muted"><strong>Time-Saving Tools:</strong> Includes proprietary tools for DEMPE analysis and credit rating estimation.</span>
-                                    </li>
-                                    <li class="d-flex mb-3">
-                                        <i class="fa-solid fa-check text-success me-3 mt-1"></i>
-                                        <span class="text-muted"><strong>Trusted by Experts:</strong> Relied upon by over 100 transfer pricing professionals across the Middle East.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6 text-center">
-                                <img src="Why_GulfTP_Services_Database_GulfTP-768x614.webp" alt="GulfTP Platform" class="img-fluid rounded-4 shadow-sm" style="max-height: 250px; object-fit: cover;">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Call to Action -->
-                    <div class="bg-light p-5 rounded-4 mt-5 text-start border position-relative overflow-hidden">
-                        <div class="position-absolute top-0 end-0 h-100 w-50 d-none d-md-block" style="background: linear-gradient(90deg, transparent, rgba(243, 146, 35, 0.05));"></div>
-                        <div class="row align-items-center position-relative z-1">
-                            <div class="col-md-8">
-                                <h3 class="fw-bold text-dark mb-3">Schedule Your Personalized Demo</h3>
-                                <p class="text-muted fs-5 mb-0">Let our experts show you exactly how GulfTP can streamline your workflow and secure your compliance.</p>
-                            </div>
-                            <div class="col-md-4 text-md-end mt-4 mt-md-0">
-                                <a href="contact.html" class="btn btn-lg w-100 fw-bold text-white shadow-sm" style="background-color: var(--primary-orange); border-radius: 12px; padding: 15px 30px; transition: transform 0.2s;">Request Demo <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
+
     </div>
 </main>
 <footer class="footer position-relative">
