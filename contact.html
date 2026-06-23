@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gulfApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GulfTP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="ContactCtrl" class="bg-light">
+
+<!-- Top Bar (Conxora Style) -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <ul class="top-info">
+                        <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuristic Navbar (Conxora Style) -->
+    <header class="navbar-custom sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg py-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="GulfTP" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #f39223; font-weight: 700; font-size: 1.1rem;">Solutions<span class="dd-arrow"><svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg></span></a>
+                            <ul class="dropdown-menu" style="min-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="gulf-company-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-building me-3" style="color: #f39223;"></i>Gulf Company Database</a></li>
+                                <li><a class="dropdown-item" href="interest-rates-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-chart-line me-3" style="color: #f39223;"></i>Interest Rates Database</a></li>
+                                <li><a class="dropdown-item" href="services-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-server me-3" style="color: #f39223;"></i>Services Database</a></li>
+                                <li><a class="dropdown-item" href="ip-licensing-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-file-contract me-3" style="color: #f39223;"></i>IP Licensing Database</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regulation <span class="dd-arrow"><svg viewBox="0 0 12 12" ><polyline points="2,4 6,8 10,4"/></svg></span></a>
+                           <ul class="dropdown-menu" style="min-width: 260px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="uae-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>United Arab Emirates</a></li>
+                                <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="qatar-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Qatar</a></li>
+                                <li><a class="dropdown-item" href="bahrain-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Bahrain</a></li>
+                                <li><a class="dropdown-item" href="oman-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Oman</a></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Egypt</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex gap-3">
+                    <a href="book-search.html" class="btn-conxora">Book Search</a>
+                    <a href="book-an-appointment.html" class="btn-conxora" style="background-color: transparent !important; color: var(--primary-green) !important; border: 1px solid var(--primary-green) !important;">Book Appointment</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<style>
+    .contact-hero {
+        position: relative;
+        padding: 100px 0;
+        min-height: calc(100vh - 150px);
+        display: flex;
+        align-items: center;
+        color: white;
+        background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .contact-hero::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(to right, rgba(232, 97, 44, 0.1) 0%, rgba(232, 97, 44, 0.85) 45%, #e8612c 100%);
+        z-index: 1;
+    }
+    .contact-hero .container {
+        position: relative;
+        z-index: 2;
+    }
+    .contact-form-glass {
+        background: transparent;
+    }
+    .glass-input {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: white;
+        border-radius: 0;
+    }
+    .glass-input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .glass-input:focus {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: white;
+        color: white;
+        box-shadow: none;
+    }
+    .glass-select {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: white;
+        border-radius: 0;
+    }
+    .glass-select option {
+        color: black;
+    }
+    .contact-heading {
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    .email-block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .email-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-right: 20px;
+    }
+    .send-now-btn {
+        background-color: var(--primary-green);
+        color: white;
+        border: none;
+        padding: 15px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border-radius: 0;
+    }
+    .send-now-btn:hover {
+        background-color: #064d39;
+        color: white;
+    }
+</style>
+
+<section class="contact-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-6 pe-lg-5">
+                <h1 class="contact-heading">Get in touch for transfer pricing<br>guidance and GCC benchmark searches</h1>
+                
+                <div class="email-block">
+                    <div class="email-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1 fw-bold">Email us</h5>
+                        <p class="mb-0 text-white-50">admin@gulftp.com</p>
+                    </div>
+                </div>
+
+                <div class="email-block">
+                    <div class="email-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1 fw-bold">WhatsApp us</h5>
+                        <p class="mb-0 text-white-50">+971 581711600</p>
+                    </div>
+                </div>
+
+                <p class="mb-4" style="font-size: 1rem; opacity: 0.9;">Let's discuss your transfer pricing requirements and how we can support your GCC benchmarking study.</p>
+                
+                <form name="contactForm" ng-submit="submitForm()" novalidate class="contact-form-glass">
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control p-3 glass-input" placeholder="First name *" ng-model="formData.firstName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control p-3 glass-input" placeholder="Last name *" ng-model="formData.lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <input type="email" class="form-control p-3 glass-input" placeholder="Email address *" ng-model="formData.email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control p-3 glass-input" placeholder="Phone number *" ng-model="formData.phone" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control p-3 glass-input" placeholder="WhatsApp number (optional)" ng-model="formData.whatsapp">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control p-3 glass-input" placeholder="Company name *" ng-model="formData.company" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <select class="form-select p-3 glass-select" ng-model="formData.service" required>
+                                <option value="" disabled selected hidden>Service needed *</option>
+                                <option value="GCC Benchmark Search">GCC Benchmark Search</option>
+                                <option value="Transfer Pricing Study">Transfer Pricing Study</option>
+                                <option value="Database Subscription">Database Subscription</option>
+                                <option value="Consultation">Expert Consultation</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-select p-3 glass-select" ng-model="formData.country" required>
+                                <option value="" disabled selected hidden>GCC Country *</option>
+                                <option value="UAE">UAE</option>
+                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                <option value="Qatar">Qatar</option>
+                                <option value="Bahrain">Bahrain</option>
+                                <option value="Oman">Oman</option>
+                                <option value="Egypt">Egypt</option>
+                                <option value="Multiple">Multiple Countries</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <textarea class="form-control p-3 glass-input" rows="4" placeholder="Describe your transfer pricing needs *" ng-model="formData.message" required></textarea>
+                    </div>
+                    
+                    <input type="hidden" name="email_to" value="admin@gulftp.com">
+                    
+                    <button type="submit" class="btn w-100 send-now-btn" ng-disabled="contactForm.$invalid">
+                        <i class="fas fa-paper-plane me-2"></i> Send Request
+                    </button>
+
+                    <div class="alert alert-success mt-4 text-center bg-white text-success border-0" ng-show="successMessage">
+                        <i class="fa-solid fa-check-circle me-2"></i> {{ successMessage }}
+                    </div>
+
+                    <div class="alert alert-danger mt-4 text-center bg-white text-danger border-0" ng-show="errorMessage">
+                        <i class="fa-solid fa-exclamation-circle me-2"></i> {{ errorMessage }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Unique Futuristic Footer -->
+    <footer class="footer position-relative">
+        <!-- Abstract SVG Wave -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L48 10.7C96 21.3 192 42.7 288 53.3C384 64 480 64 576 53.3C672 42.7 768 21.3 864 16C960 10.7 1056 21.3 1152 37.3C1248 53.3 1344 74.7 1392 85.3L1440 96V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="#0b1120"/>
+            </svg>
+        </div>
+        
+        <div class="container position-relative z-index-1">
+            <div class="row pt-5 pb-4 g-5">
+                <!-- Branding and Newsletter -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <a href="index.html" class="d-inline-block mb-4">
+                        <img src="Gulf_TP_Footer_Logo_White.webp" alt="GulfTP" style="height: 55px; object-fit: contain;">
+                    </a>
+                    <p class="pe-lg-5 mb-4 text-light opacity-75">GulfTP is the definitive transfer pricing database for the GCC region, providing reliable data for multinational enterprises and tax professionals.</p>
+                    
+                    <!-- Glowing Newsletter Signup -->
+                    <div class="footer-newsletter mt-4">
+                        <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
+                        <form ng-submit="subscribeNewsletter()" class="position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" ng-model="userEmail" required>
+                            <button class="btn footer-submit-btn" type="submit">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Links Columns -->
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Solutions</h5>
+                    <a href="services-database.html" class="footer-link">Services Database</a>
+                    <a href="interest-rates-database.html" class="footer-link">Interest Rates</a>
+                    <a href="ip-licensing-database.html" class="footer-link">IP Licensing</a>
+                    <a href="gulf-company-database.html" class="footer-link">Gulf Companies</a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <a href="book-search.html" class="footer-link">Book a Search</a>
+                    <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
+                    <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
+                    
+                    <div class="social-icons-modern">
+                        <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gulftp?igsh=b3dybTE2OXFoNnIx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gulf-tp/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    &copy; 2026 GulfTP. All Rights Reserved. Built for the Future.
+                </div>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="mx-2 opacity-50">|</span>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        var app = angular.module('gulfApp', []);
+        app.controller('ContactCtrl', function($scope, $timeout, $http) {
+            $scope.formData = {};
+            $scope.successMessage = "";
+            $scope.errorMessage = "";
+            $scope.isSubmitting = false;
+
+            $scope.submitForm = function() {
+                if ($scope.contactForm.$valid) {
+                    $scope.isSubmitting = true;
+                    $scope.errorMessage = "";
+
+                    $http.post('submit-form-simple.php', $scope.formData)
+                        .then(function(response) {
+                            $scope.isSubmitting = false;
+                            if (response.data.success) {
+                                $scope.successMessage = "Thank you! Your message has been sent successfully. We will contact you shortly.";
+                                $scope.formData = {};
+                                $scope.contactForm.$setPristine();
+                                $scope.contactForm.$setUntouched();
+
+                                $timeout(function() {
+                                    $scope.successMessage = "";
+                                }, 5000);
+                            } else {
+                                $scope.errorMessage = response.data.error || "Failed to send your message.";
+                            }
+                        })
+                        .catch(function(error) {
+                            $scope.isSubmitting = false;
+                            $scope.errorMessage = "Failed to send your message. Please try again.";
+                            console.error('Error:', error);
+                        });
+                }
+            };
+        });
+    </script>
+</body>
+</html>

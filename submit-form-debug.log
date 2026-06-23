@@ -1,0 +1,9 @@
+
+
+=== NEW REQUEST ===
+Time: 2026-06-10 09:33:39
+Method: POST
+Raw Input: {"firstName":"Sakshi","lastName":"Dhawale","email":"sakshi.dhawale5004@gmail.com","phone":"08010140701","company":"DIGITAL","service":"GCC Benchmark Search","country":"Saudi Arabia","message":"TESTING...
+Decoded Data: {"firstName":"Sakshi","lastName":"Dhawale","email":"sakshi.dhawale5004@gmail.com","phone":"08010140701","company":"DIGITAL","service":"GCC Benchmark Search","country":"Saudi Arabia","message":"TESTING"}
+Validation: PASSED
+Connecting to: localhost | User: u852823366_gulfpmain | DB: u852823366_gulftpforms

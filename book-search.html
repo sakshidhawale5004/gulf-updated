@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Search - GulfTP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top Bar (Conxora Style) -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <ul class="top-info">
+                        <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuristic Navbar (Conxora Style) -->
+    <header class="navbar-custom sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg py-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="GulfTP" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #f39223; font-weight: 700; font-size: 1.1rem;">Solutions<span class="dd-arrow"><svg viewBox="0 0 12 12" ...><polyline points="2,4 6,8 10,4"/></svg></span></a>
+                            <ul class="dropdown-menu" style="min-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="gulf-company-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-building me-3" style="color: #f39223;"></i>Gulf Company Database</a></li>
+                                <li><a class="dropdown-item" href="interest-rates-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-chart-line me-3" style="color: #f39223;"></i>Interest Rates Database</a></li>
+                                <li><a class="dropdown-item" href="services-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-server me-3" style="color: #f39223;"></i>Services Database</a></li>
+                                <li><a class="dropdown-item" href="ip-licensing-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-file-contract me-3" style="color: #f39223;"></i>IP Licensing Database</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regulation <span class="dd-arrow"><svg viewBox="0 0 12 12" ...><polyline points="2,4 6,8 10,4"/></svg></span></a>
+                            <ul class="dropdown-menu" style="min-width: 260px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="uae-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>United Arab Emirates</a></li>
+                                <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="qatar-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Qatar</a></li>
+                                <li><a class="dropdown-item" href="bahrain-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Bahrain</a></li>
+                                <li><a class="dropdown-item" href="oman-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Oman</a></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Egypt</a></li>
+                            </ul>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex gap-3">
+                    <a href="book-search.html" class="btn-conxora">Book Search</a>
+                    <a href="book-an-appointment.html" class="btn-conxora" style="background-color: transparent !important; color: var(--primary-green) !important; border: 1px solid var(--primary-green) !important;">Book Appointment</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<style>
+    .premium-page-wrapper {
+        background-color: #f8f9fa;
+        min-height: calc(100vh - 200px);
+    }
+    .premium-card-shadow {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    .premium-left-panel {
+        background: linear-gradient(135deg, #08664b, #054834);
+        overflow: hidden;
+    }
+    .panel-bg-overlay {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+        transform: rotate(30deg);
+        pointer-events: none;
+    }
+    .premium-input, .premium-select, .premium-textarea {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+    .premium-input:focus, .premium-select:focus, .premium-textarea:focus {
+        background-color: #fff;
+        border-color: #08664b;
+        box-shadow: 0 0 0 0.25rem rgba(8, 102, 75, 0.1);
+    }
+    .premium-submit-btn {
+        transition: all 0.3s ease;
+    }
+    .premium-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(232, 97, 44, 0.3) !important;
+    }
+</style>
+<main class="premium-page-wrapper py-5">
+    <div class="container">
+        <div class="row g-0 premium-card-shadow rounded-4 overflow-hidden">
+            <!-- Left Info Panel -->
+            <div class="col-lg-5 premium-left-panel p-5 text-white d-flex flex-column position-relative">
+                <div class="panel-bg-overlay"></div>
+                <div class="position-relative z-index-1">
+                    <span class="badge bg-white text-success mb-3 px-3 py-2 rounded-pill fw-bold" style="font-size: 0.8rem; letter-spacing: 1px;">GCC TRANSFER PRICING DATA</span>
+                    <h1 class="display-5 fw-bold mb-4">Request a GCC Benchmark Search</h1>
+                    <p class="fs-5 text-white-50 mb-4" style="color: var(--primary-orange) !important; opacity: 1;">Get verified comparable company data and expert guidance for your transfer pricing benchmarking study across the GCC region.</p>
+                    <p class="mb-4 text-white-50">Our streamlined process delivers regulation-compliant benchmarking data quickly and efficiently.</p>
+                    
+                    <div class="mt-4">
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-white text-success rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 32px; height: 32px;">1</div>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="fw-bold mb-1">Submit Your Request</h6>
+                                <p class="text-white-50 small mb-0">Provide transaction details and specify the GCC country/countries for your benchmarking study.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-white text-success rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 32px; height: 32px;">2</div>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="fw-bold mb-1">Secure Your Report</h6>
+                                <p class="text-white-50 small mb-0">Complete payment of $750 for your GCC benchmark search (includes verified comparable data and expert analysis).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-5">
+                            <div class="flex-shrink-0">
+                                <div class="bg-white text-success rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 32px; height: 32px;">3</div>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="fw-bold mb-1">Receive Your Benchmarking Report</h6>
+                                <p class="text-white-50 small mb-0">Your comprehensive report with verified GCC comparable companies and analysis will be delivered within 2 business days.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-top border-light border-opacity-25 mt-auto">
+                            <p class="mb-2 fw-bold"><i class="fa-solid fa-file-pdf me-2"></i> Sample report available on request</p>
+                            <p class="mb-0 text-white-50 small">Contact us to review a sample benchmarking report and understand our deliverables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Form Panel -->
+            <div class="col-lg-7 bg-white p-5">
+                <h3 class="fw-bold mb-4" style="color: var(--primary-green);">Request Your GCC Benchmark Search</h3>
+                <form id="searchForm">
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" name="firstName" class="form-control form-control-lg premium-input" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" name="email" class="form-control form-control-lg premium-input" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Phone Number <span class="text-danger">*</span></label>
+                            <input type="tel" name="phone" class="form-control form-control-lg premium-input" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Company Name <span class="text-danger">*</span></label>
+                            <input type="text" name="company" class="form-control form-control-lg premium-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary">Which GCC country/countries do you need benchmarking data for? <span class="text-danger">*</span></label>
+                        <select name="country" class="form-select form-select-lg premium-select" required>
+                            <option value="">Select country/countries...</option>
+                            <option>UAE</option>
+                            <option>Saudi Arabia</option>
+                            <option>Qatar</option>
+                            <option>Bahrain</option>
+                            <option>Oman</option>
+                            <option>Egypt</option>
+                            <option>Multiple Countries</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary">Transaction Type / Industry <span class="text-danger">*</span></label>
+                        <select name="transactionType" class="form-select form-select-lg premium-select" required>
+                            <option value="">Select an option...</option>
+                            <option>Manufacturing</option>
+                            <option>Software Development</option>
+                            <option>Financial Services</option>
+                            <option>Consulting Services</option>
+                            <option>Import/Export</option>
+                            <option>Logistics</option>
+                            <option>Trading</option>
+                            <option>Real Estate</option>
+                            <option>Retail</option>
+                            <option>Hospitality</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary">Additional Details (Optional)</label>
+                        <textarea name="message" class="form-control form-control-lg premium-textarea" rows="3" placeholder="Please provide any additional information about your transaction..."></textarea>
+                    </div>
+
+                    <div class="alert alert-info mb-4">
+                        <i class="fa-solid fa-info-circle me-2"></i> <strong>Price: $750</strong> - Includes verified comparable company data and expert analysis
+                    </div>
+                    
+                    <!-- Payment Status Messages -->
+                    <div class="alert alert-success mb-4" id="successMessage" style="display: none;">
+                        <i class="fa-solid fa-check-circle me-2"></i> Payment successful! Your benchmarking report will be delivered within 2 business days.
+                    </div>
+                    <div class="alert alert-danger mb-4" id="errorMessage" style="display: none;">
+                        <i class="fa-solid fa-exclamation-circle me-2"></i> <span id="errorText"></span>
+                    </div>
+
+                    <button type="button" class="btn btn-lg w-100 fw-bold text-white shadow-sm premium-submit-btn" id="paymentBtn" style="background: linear-gradient(135deg, var(--primary-orange), #e8612c); border: none; padding: 15px 0;">
+                        Proceed to Payment - $750 <i class="fa-solid fa-credit-card ms-2"></i>
+                    </button>
+                </form>
+            </div>
+                            <option value="">Select country/countries...</option>
+                            <option>UAE</option>
+                            <option>Saudi Arabia</option>
+                            <option>Qatar</option>
+                            <option>Bahrain</option>
+                            <option>Oman</option>
+                            <option>Egypt</option>
+                            <option>Multiple Countries</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary">Transaction Type / Industry <span class="text-danger">*</span></label>
+                        <select class="form-select form-select-lg premium-select" required>
+                            <option value="">Select an option...</option>
+                            <option>Assembling of motovechicles</option>
+                            <option>Botanical garden operation</option>
+                            <option>Bottling of water</option>
+                            <option>Building of ships</option>
+                            <option>Business process outsourcing</option>
+                            <option>Call center operations</option>
+                            <option>Canning of fruits</option>
+                            <option>Casting of metal products</option>
+                            <option>Chamber of commerce</option>
+                            <option>Chemicals, Plastics, and Rubber</option>
+                            <option>Civic and social organizations</option>
+                            <option>Cloud computing services</option>
+                            <option>Cloud migration services</option>
+                            <option>Computers and Electronics</option>
+                            <option>Diaper service</option>
+                            <option>Drying of fresh produce</option>
+                            <option>Educational support services</option>
+                            <option>Electrical Equipment and Appliances</option>
+                            <option>Environmental impact analysis</option>
+                            <option>Fabrication of electrical relays</option>
+                            <option>Financial planning services</option>
+                            <option>Fine arts schools</option>
+                            <option>Finishing of textiles</option>
+                            <option>Food service contractors</option>
+                            <option>Food, Beverages, and Tobacco</option>
+                            <option>Forging of metal</option>
+                            <option>Freezing of vegetables</option>
+                            <option>Furniture and Miscellaneous Goods</option>
+                            <option>Hazardous waste treatment</option>
+                            <option>Home blood collection</option>
+                            <option>Infrastructure as a service (IaaS)</option>
+                            <option>Internet access provision</option>
+                            <option>Machinery and Equipment</option>
+                            <option>Making of adhesive tape</option>
+                            <option>Making of advertising displays</option>
+                            <option>Making of aircraft engines</option>
+                            <option>Making of aluminum</option>
+                            <option>Making of audio equipment</option>
+                            <option>Making of baby carriages</option>
+                            <option>Making of bakery equipment</option>
+                            <option>Making of batteries</option>
+                            <option>Making of blankets</option>
+                            <option>Making of bread</option>
+                            <option>Making of brooms</option>
+                            <option>Making of car bodies</option>
+                            <option>Making of cheese</option>
+                            <option>Making of clay products</option>
+                            <option>Making of clocks</option>
+                            <option>Making of coffee</option>
+                            <option>Making of coffins</option>
+                            <option>Making of concrete</option>
+                            <option>Making of condiments</option>
+                            <option>Making of curtains</option>
+                            <option>Making of essential oils</option>
+                            <option>Making of eyeglasses</option>
+                            <option>Making of fishing nets</option>
+                            <option>Making of flat glass</option>
+                            <option>Making of fuses</option>
+                            <option>Making of gears</option>
+                            <option>Making of hand tools</option>
+                            <option>Making of hardware</option>
+                            <option>Making of industrial fans</option>
+                            <option>Making of insulated wire</option>
+                            <option>Making of kitchen utensils</option>
+                            <option>Making of leather footwear</option>
+                            <option>Making of lighters</option>
+                            <option>Making of machine tools</option>
+                            <option>Making of mattresses</option>
+                            <option>Making of medical imaging equipment</option>
+                            <option>Making of metal doors</option>
+                            <option>Making of monitors</option>
+                            <option>Making of nuts and bolts</option>
+                            <option>Making of oil drilling equipment</option>
+                            <option>Making of packaging machinery</option>
+                            <option>Making of paper pulp</option>
+                            <option>Making of paperboard</option>
+                            <option>Making of pens</option>
+                            <option>Making of pharmaceuticals</option>
+                            <option>Making of pianos</option>
+                            <option>Making of plastic pipe</option>
+                            <option>Making of plows</option>
+                            <option>Making of prepared foods</option>
+                            <option>Making of printed circuits</option>
+                            <option>Making of refrigerators</option>
+                            <option>Making of rubber hoses</option>
+                            <option>Making of sanitary paper</option>
+                            <option>Making of sealing compounds</option>
+                            <option>Making of seat covers</option>
+                            <option>Making of semiconductors</option>
+                            <option>Making of snack foods</option>
+                            <option>Making of soap</option>
+                            <option>Making of solar panels</option>
+                            <option>Making of spirits</option>
+                            <option>Making of sports equipment</option>
+                            <option>Making of sugar</option>
+                            <option>Making of synthetic rubber</option>
+                            <option>Making of tablets</option>
+                            <option>Making of tents</option>
+                            <option>Making of textile goods</option>
+                            <option>Making of tiles</option>
+                            <option>Making of train signals</option>
+                            <option>Making of trusses</option>
+                            <option>Making of turbines</option>
+                            <option>Making of uniforms</option>
+                            <option>Making of washing machines</option>
+                            <option>Making of wires</option>
+                            <option>Making of zippers</option>
+                            <option>Manufacturing of abrasives</option>
+                            <option>Manufacturing of Active pharmaceutical ingredients</option>
+                            <option>Manufacturing of Air Compressors</option>
+                            <option>Manufacturing of aircraft</option>
+                            <option>Manufacturing of Aluminium Cans</option>
+                            <option>Manufacturing of and assembly of PC</option>
+                            <option>Manufacturing of and supply of consumables electronics assembly</option>
+                            <option>Manufacturing of animal traps</option>
+                            <option>Manufacturing of Apparels</option>
+                            <option>Manufacturing of athletic gear</option>
+                            <option>Manufacturing of Auto Components</option>
+                            <option>Manufacturing of Automobile Ancillaries</option>
+                            <option>Manufacturing of automobile components</option>
+                            <option>Manufacturing of Automotive Products</option>
+                            <option>Manufacturing of Batteries</option>
+                            <option>Manufacturing of beer</option>
+                            <option>Manufacturing of Bike and scooter parts and components</option>
+                            <option>Manufacturing of boats</option>
+                            <option>Manufacturing of Boilers and Heaters</option>
+                            <option>Manufacturing of Cables and Connectors</option>
+                            <option>Manufacturing of capacitors</option>
+                            <option>Manufacturing of Capacitors</option>
+                            <option>Manufacturing of car engines</option>
+                            <option>Manufacturing of cardboard</option>
+                            <option>Manufacturing of Catalysts</option>
+                            <option>Manufacturing of cement</option>
+                            <option>Manufacturing of Cement and Clinker</option>
+                            <option>Manufacturing of Clamps and clamping tools</option>
+                            <option>Manufacturing of computer peripherals</option>
+                            <option>Manufacturing of computers</option>
+                            <option>Manufacturing of construction machinery</option>
+                            <option>Manufacturing of cookies</option>
+                            <option>Manufacturing of cooking oil</option>
+                            <option>Manufacturing of cosmetics</option>
+                            <option>Manufacturing of Cosmetics</option>
+                            <option>Manufacturing of cutlery</option>
+                            <option>Manufacturing of Cutting tools</option>
+                            <option>Manufacturing of dairy products</option>
+                            <option>Manufacturing of Distribution of spares and components</option>
+                            <option>Manufacturing of dresses</option>
+                            <option>Manufacturing of electric motors</option>
+                            <option>Manufacturing of Electrical Machinery and Electronics</option>
+                            <option>Manufacturing of Electrical Products</option>
+                            <option>Manufacturing of Electronic Equipment's</option>
+                            <option>Manufacturing of elevators</option>
+                            <option>Manufacturing of Engineering Goods</option>
+                            <option>Manufacturing of farm equipment</option>
+                            <option>Manufacturing of Fasteners</option>
+                            <option>Manufacturing of Ferrous and non-ferrous metals</option>
+                            <option>Manufacturing of fiber optics</option>
+                            <option>Manufacturing of fixtures</option>
+                            <option>Manufacturing of Flour milling</option>
+                            <option>Manufacturing of furnaces</option>
+                            <option>Manufacturing of Furniture</option>
+                            <option>Manufacturing of Garments</option>
+                            <option>Manufacturing of glass</option>
+                            <option>Manufacturing of Hardware and Software</option>
+                            <option>Manufacturing of hearing aids</option>
+                            <option>Manufacturing of heating apparatus</option>
+                            <option>Manufacturing of household furniture</option>
+                            <option>Manufacturing of Injection molding machines</option>
+                            <option>Manufacturing of Instruments and spare parts</option>
+                            <option>Manufacturing of IT Products</option>
+                            <option>Manufacturing of jewelry</option>
+                            <option>Manufacturing of knitwear</option>
+                            <option>Manufacturing of Laboratory Reagents</option>
+                            <option>Manufacturing of lighting fixtures</option>
+                            <option>Manufacturing of Lubricants</option>
+                            <option>Manufacturing of Lubricating products</option>
+                            <option>Manufacturing of luxury perfumes and beauty products</option>
+                            <option>Manufacturing of Machining tools</option>
+                            <option>Manufacturing of matches</option>
+                            <option>Manufacturing of Material Handling and vehicle</option>
+                            <option>Manufacturing of meat products</option>
+                            <option>Manufacturing of Medical equipment</option>
+                            <option>Manufacturing of medical gloves</option>
+                            <option>Manufacturing of Metal castings</option>
+                            <option>Manufacturing of metal tanks</option>
+                            <option>Manufacturing of military vehicles</option>
+                            <option>Manufacturing of Mobile</option>
+                            <option>Manufacturing of Motion picture production</option>
+                            <option>Manufacturing of motorcycles</option>
+                            <option>Manufacturing of Music video production</option>
+                            <option>Manufacturing of Non Electrical Machinery Non Electrical Machinery</option>
+                            <option>Manufacturing of office supplies</option>
+                            <option>Manufacturing of paint</option>
+                            <option>Manufacturing of Paper and pulp products</option>
+                            <option>Manufacturing of passenger cars</option>
+                            <option>Manufacturing of pesticides</option>
+                            <option>Manufacturing of Petroleum equipment</option>
+                            <option>Manufacturing of Pharma products</option>
+                            <option>Manufacturing of Pharmaceuticals</option>
+                            <option>Manufacturing of plaster</option>
+                            <option>Manufacturing of plastic bottles</option>
+                            <option>Manufacturing of plastics</option>
+                            <option>Manufacturing of Plastics</option>
+                            <option>Manufacturing of plywood</option>
+                            <option>Manufacturing of Power Control Module</option>
+                            <option>Manufacturing of power generators</option>
+                            <option>Manufacturing of prefabricated homes</option>
+                            <option>Manufacturing of pumps</option>
+                            <option>Manufacturing of rail cars</option>
+                            <option>Manufacturing of Road Construction Equipment</option>
+                            <option>Manufacturing of Rubber Tyres</option>
+                            <option>Manufacturing of sails</option>
+                            <option>Manufacturing of Sale of Power</option>
+                            <option>Manufacturing of Servers</option>
+                            <option>Manufacturing of signs</option>
+                            <option>Manufacturing of Skincare</option>
+                            <option>Manufacturing of smartphones</option>
+                            <option>Manufacturing of Spares and tools</option>
+                            <option>Manufacturing of Speciality Chemicals</option>
+                            <option>Manufacturing of Stainless steel tubes and pipes</option>
+                            <option>Manufacturing of stamps</option>
+                            <option>Manufacturing of Starches</option>
+                            <option>Manufacturing of stationery</option>
+                            <option>Manufacturing of steel</option>
+                            <option>Manufacturing of Steel coil</option>
+                            <option>Manufacturing of surgical instruments</option>
+                            <option>Manufacturing of Telecom products</option>
+                            <option>Manufacturing of televisions</option>
+                            <option>Manufacturing of Testing and Measurement Equipment</option>
+                            <option>Manufacturing of textile bags</option>
+                            <option>Manufacturing of textile machinery</option>
+                            <option>Manufacturing of thermoplastic elastomer and silicone masterbatch</option>
+                            <option>Manufacturing of tobacco products</option>
+                            <option>Manufacturing of tools</option>
+                            <option>Manufacturing of toys</option>
+                            <option>Manufacturing of Turbo Systems</option>
+                            <option>Manufacturing of umbrellas</option>
+                            <option>Manufacturing of Valves</option>
+                            <option>Manufacturing of Water heaters</option>
+                            <option>Manufacturing of welding equipment</option>
+                            <option>Manufacturing of wigs</option>
+                            <option>Manufacturing of wiring devices</option>
+                            <option>Manufacturing of yarn</option>
+                            <option>Medical specimen collection</option>
+                            <option>Mental health practitioners</option>
+                            <option>Mental health residential</option>
+                            <option>Non-Metallic Minerals</option>
+                            <option>Parent-teacher organizations</option>
+                            <option>Primary and Fabricated Metals</option>
+                            <option>Printing of books</option>
+                            <option>Printing of magazines</option>
+                            <option>Printing of newspapers</option>
+                            <option>Processing of fresh fish</option>
+                            <option>Processing of non-ferrous metals</option>
+                            <option>Processing of poultry</option>
+                            <option>Production of adhesives</option>
+                            <option>Production of armored cars</option>
+                            <option>Production of artificial flowers</option>
+                            <option>Production of artistic goods</option>
+                            <option>Production of bearings</option>
+                            <option>Production of bicycles</option>
+                            <option>Production of bird cages</option>
+                            <option>Production of blinds</option>
+                            <option>Production of breakfast cereals</option>
+                            <option>Production of bricks</option>
+                            <option>Production of buttons</option>
+                            <option>Production of candles</option>
+                            <option>Production of ceramic goods</option>
+                            <option>Production of chocolate</option>
+                            <option>Production of cleaning products</option>
+                            <option>Production of clothes</option>
+                            <option>Production of compressors</option>
+                            <option>Production of control panels</option>
+                            <option>Production of corrugated boxes</option>
+                            <option>Production of cut stone</option>
+                            <option>Production of dental equipment</option>
+                            <option>Production of electrical switchgear</option>
+                            <option>Production of electronic components</option>
+                            <option>Production of engines</option>
+                            <option>Production of escalators</option>
+                            <option>Production of explosives</option>
+                            <option>Production of fabric</option>
+                            <option>Production of fertilizers</option>
+                            <option>Production of food machinery</option>
+                            <option>Production of games</option>
+                            <option>Production of glass containers</option>
+                            <option>Production of greeting cards</option>
+                            <option>Production of handbags</option>
+                            <option>Production of household appliances</option>
+                            <option>Production of ice cream</option>
+                            <option>Production of industrial robots</option>
+                            <option>Production of ink</option>
+                            <option>Production of iron</option>
+                            <option>Production of knives</option>
+                            <option>Production of laptops</option>
+                            <option>Production of lime</option>
+                            <option>Production of linens</option>
+                            <option>Production of locomotives</option>
+                            <option>Production of medical furniture</option>
+                            <option>Production of medicines</option>
+                            <option>Production of metal cans</option>
+                            <option>Production of metal windows</option>
+                            <option>Production of mining machinery</option>
+                            <option>Production of monuments</option>
+                            <option>Production of musical instruments</option>
+                            <option>Production of navigation systems</option>
+                            <option>Production of office furniture</option>
+                            <option>Production of outerwear</option>
+                            <option>Production of ovens</option>
+                            <option>Production of paint brushes</option>
+                            <option>Production of paper</option>
+                            <option>Production of paper bags</option>
+                            <option>Production of pasta</option>
+                            <option>Production of pencils</option>
+                            <option>Production of plumbing fixtures</option>
+                            <option>Production of power tools</option>
+                            <option>Production of prepared meals</option>
+                            <option>Production of printers</option>
+                            <option>Production of resins</option>
+                            <option>Production of resistors</option>
+                            <option>Production of rope</option>
+                            <option>Production of rubber tires</option>
+                            <option>Production of sausages</option>
+                            <option>Production of ship parts</option>
+                            <option>Production of soft drinks</option>
+                            <option>Production of spacecraft</option>
+                            <option>Production of sporting trophies</option>
+                            <option>Production of springs</option>
+                            <option>Production of tea</option>
+                            <option>Production of telephone equipment</option>
+                            <option>Production of towels</option>
+                            <option>Production of tractors</option>
+                            <option>Production of trailers</option>
+                            <option>Production of transformers</option>
+                            <option>Production of transmission components</option>
+                            <option>Production of trucks</option>
+                            <option>Production of vacuum cleaners</option>
+                            <option>Production of video equipment</option>
+                            <option>Production of watches</option>
+                            <option>Production of wine</option>
+                            <option>Production of wood containers</option>
+                            <option>Production of wood flooring</option>
+                            <option>Provision of Acting school services</option>
+                            <option>Provision of Adult day care services</option>
+                            <option>Provision of Airline ticketing services</option>
+                            <option>Provision of Animal training services</option>
+                            <option>Provision of Animal welfare services</option>
+                            <option>Provision of Appliance repair services</option>
+                            <option>Provision of Application hosting services</option>
+                            <option>Provision of Armored car services</option>
+                            <option>Provision of Audiology services</option>
+                            <option>Provision of Automotive repair services</option>
+                            <option>Provision of Automotive towing services</option>
+                            <option>Provision of Barber shop services</option>
+                            <option>Provision of Bartending services</option>
+                            <option>Provision of Beauty salon services</option>
+                            <option>Provision of Bed and breakfast services</option>
+                            <option>Provision of Beverage services</option>
+                            <option>Provision of Billiard parlor services</option>
+                            <option>Provision of Blood bank services</option>
+                            <option>Provision of Boat repair services</option>
+                            <option>Provision of Book publishing services</option>
+                            <option>Provision of Bowling center services</option>
+                            <option>Provision of BPO services</option>
+                            <option>Provision of Business association services</option>
+                            <option>Provision of Business coaching services</option>
+                            <option>Provision of Business promotion services</option>
+                            <option>Provision of Cable and internet services</option>
+                            <option>Provision of Campground services</option>
+                            <option>Provision of Car wash services</option>
+                            <option>Provision of Career training services</option>
+                            <option>Provision of Carpet cleaning services</option>
+                            <option>Provision of Casino hotel services</option>
+                            <option>Provision of Caterers services</option>
+                            <option>Provision of Change management consulting</option>
+                            <option>Provision of Charitable foundation services</option>
+                            <option>Provision of Chimney sweep services</option>
+                            <option>Provision of Chiropractic services</option>
+                            <option>Provision of Clinical laboratory services</option>
+                            <option>Provision of Collection agency services</option>
+                            <option>Provision of Commercial machinery repair</option>
+                            <option>Provision of Community foundation services</option>
+                            <option>Provision of Community sports services</option>
+                            <option>Provision of Computer repair instruction</option>
+                            <option>Provision of Computer training services</option>
+                            <option>Provision of Concert promotion services</option>
+                            <option>Provision of Concession stand services</option>
+                            <option>Provision of Convention planning services</option>
+                            <option>Provision of Corporate travel services</option>
+                            <option>Provision of Court reporting services</option>
+                            <option>Provision of Credit bureau services</option>
+                            <option>Provision of Credit counseling services</option>
+                            <option>Provision of Cremation services</option>
+                            <option>Provision of Cruise line services</option>
+                            <option>Provision of Cybersecurity services</option>
+                            <option>Provision of Dance studio services</option>
+                            <option>Provision of Data analytics services</option>
+                            <option>Provision of Data processing services</option>
+                            <option>Provision of Data warehousing services</option>
+                            <option>Provision of Database publishing services</option>
+                            <option>Provision of Dating services</option>
+                            <option>Provision of Diet and nutrition services</option>
+                            <option>Provision of Digital marketing services</option>
+                            <option>Provision of Directory publishing services</option>
+                            <option>Provision of Document preparation services</option>
+                            <option>Provision of Domestic helper services</option>
+                            <option>Provision of Driver education services</option>
+                            <option>Provision of Dry cleaning services</option>
+                            <option>Provision of Electronic equipment repair</option>
+                            <option>Provision of Employee leasing services</option>
+                            <option>Provision of Environmental advocacy services</option>
+                            <option>Provision of Event management services</option>
+                            <option>Provision of Event planning services</option>
+                            <option>Provision of Exam preparation services</option>
+                            <option>Provision of Executive search services</option>
+                            <option>Provision of Executive support services</option>
+                            <option>Provision of Exterminating services</option>
+                            <option>Provision of Facilities support services</option>
+                            <option>Provision of Family counseling services</option>
+                            <option>Provision of Fiber optic services</option>
+                            <option>Provision of Film distribution services</option>
+                            <option>Provision of Film editing services</option>
+                            <option>Provision of Flight training services</option>
+                            <option>Provision of Foundation services</option>
+                            <option>Provision of Funeral home services</option>
+                            <option>Provision of Funeral planning services</option>
+                            <option>Provision of Fur cleaning services</option>
+                            <option>Provision of Furniture repair services</option>
+                            <option>Provision of Furniture upholstery services</option>
+                            <option>Provision of Garment alteration services</option>
+                            <option>Provision of Grantmaking services</option>
+                            <option>Provision of Greeting card publishing</option>
+                            <option>Provision of Hair removal services</option>
+                            <option>Provision of Hair salon services</option>
+                            <option>Provision of Home health aide services</option>
+                            <option>Provision of Hospice care services</option>
+                            <option>Provision of Hotel management services</option>
+                            <option>Provision of House painting services</option>
+                            <option>Provision of House sitting services</option>
+                            <option>Provision of Housekeeping services</option>
+                            <option>Provision of Internet publishing services</option>
+                            <option>Provision of Investigation services</option>
+                            <option>Provision of Janitorial services</option>
+                            <option>Provision of Journal publishing services</option>
+                            <option>Provision of Junior college services</option>
+                            <option>Provision of Labor organization services</option>
+                            <option>Provision of Landscape design services</option>
+                            <option>Provision of Landscaping maintenance services</option>
+                            <option>Provision of Landscaping services</option>
+                            <option>Provision of Laundry services</option>
+                            <option>Provision of Lawn and garden equipment repair</option>
+                            <option>Provision of Linen supply services</option>
+                            <option>Provision of Locksmith services</option>
+                            <option>Provision of Managed hosting services</option>
+                            <option>Provision of Marina services</option>
+                            <option>Provision of Maritime training services</option>
+                            <option>Provision of Meeting planning services</option>
+                            <option>Provision of Merger and acquisition consulting</option>
+                            <option>Provision of Mobile food services</option>
+                            <option>Provision of Motorcycle repair services</option>
+                            <option>Provision of Motorcycle towing services</option>
+                            <option>Provision of Music instruction services</option>
+                            <option>Provision of Music publishing services</option>
+                            <option>Provision of Nail salon services</option>
+                            <option>Provision of Nanny services</option>
+                            <option>Provision of Network support services</option>
+                            <option>Provision of News syndicate services</option>
+                            <option>Provision of Newspaper publishing services</option>
+                            <option>Provision of Notary public services</option>
+                            <option>Provision of Notary services</option>
+                            <option>Provision of Occupational therapy services</option>
+                            <option>Provision of Office administrative services</option>
+                            <option>Provision of Office support services</option>
+                            <option>Provision of Online information services</option>
+                            <option>Provision of Operations management consulting</option>
+                            <option>Provision of Optometrist services</option>
+                            <option>Provision of Packaging services</option>
+                            <option>Provision of PEO services</option>
+                            <option>Provision of Periodical publishing services</option>
+                            <option>Provision of Permanent makeup services</option>
+                            <option>Provision of Personal care services</option>
+                            <option>Provision of Pest control services</option>
+                            <option>Provision of Pest management services</option>
+                            <option>Provision of Pet boarding services</option>
+                            <option>Provision of Pet care services</option>
+                            <option>Provision of Pet grooming services</option>
+                            <option>Provision of Pet sitting services</option>
+                            <option>Provision of Photofinishing services</option>
+                            <option>Provision of Physical therapist services</option>
+                            <option>Provision of Physical therapy services</option>
+                            <option>Provision of Podiatrist services</option>
+                            <option>Provision of Political campaign services</option>
+                            <option>Provision of Political organization services</option>
+                            <option>Provision of Post-production services</option>
+                            <option>Provision of Power washing services</option>
+                            <option>Provision of Preschool education services</option>
+                            <option>Provision of Private cloud hosting</option>
+                            <option>Provision of Private detective services</option>
+                            <option>Provision of Private household services</option>
+                            <option>Provision of Professional society services</option>
+                            <option>Provision of Property management services</option>
+                            <option>Provision of Public charity services</option>
+                            <option>Provision of Public speaking services</option>
+                            <option>Provision of Quality control consulting</option>
+                            <option>Provision of Radio broadcasting services</option>
+                            <option>Provision of Radiology services</option>
+                            <option>Provision of Remediation services</option>
+                            <option>Provision of Reseller services</option>
+                            <option>Provision of Resume writing services</option>
+                            <option>Provision of RV park services</option>
+                            <option>Provision of Safety consulting services</option>
+                            <option>Provision of Satellite telecommunications services</option>
+                            <option>Provision of Shoe repair services</option>
+                            <option>Provision of Software development services</option>
+                            <option>Provision of Speech pathology services</option>
+                            <option>Provision of Sports event promotion</option>
+                            <option>Provision of Sports instruction services</option>
+                            <option>Provision of Strategic planning services</option>
+                            <option>Provision of Substance abuse services</option>
+                            <option>Provision of Supply chain consulting</option>
+                            <option>Provision of Tanning salon services</option>
+                            <option>Provision of Tattoo parlor services</option>
+                            <option>Provision of Tele-fundraising services</option>
+                            <option>Provision of Telemarketing services</option>
+                            <option>Provision of Telephone answering services</option>
+                            <option>Provision of Television broadcasting services</option>
+                            <option>Provision of Temporary staffing services</option>
+                            <option>Provision of Tennis club services</option>
+                            <option>Provision of Ticket sales services</option>
+                            <option>Provision of Timeshare services</option>
+                            <option>Provision of Tour operator services</option>
+                            <option>Provision of Trade association services</option>
+                            <option>Provision of Transcription services</option>
+                            <option>Provision of Travel agency services</option>
+                            <option>Provision of Travel arrangement services</option>
+                            <option>Provision of Uniform supply services</option>
+                            <option>Provision of Upholstery repair services</option>
+                            <option>Provision of Vacation rental services</option>
+                            <option>Provision of Vehicle inspection services</option>
+                            <option>Provision of Veteran organization services</option>
+                            <option>Provision of Video post-production services</option>
+                            <option>Provision of Video production services</option>
+                            <option>Provision of Virtual assistant services</option>
+                            <option>Provision of Virtual office services</option>
+                            <option>Provision of Voice over IP services</option>
+                            <option>Provision of Waste collection services</option>
+                            <option>Provision of Waste management consulting</option>
+                            <option>Provision of Web development services</option>
+                            <option>Provision of Web hosting services</option>
+                            <option>Provision of Weight loss services</option>
+                            <option>Provision of Window cleaning services</option>
+                            <option>Provision of Wired telecommunications services</option>
+                            <option>Provision of Wireless telecommunications services</option>
+                            <option>Provision of Youth organization services</option>
+                            <option>Refining of petroleum</option>
+                            <option>Religious organizations</option>
+                            <option>Retail of antiques</option>
+                            <option>Retail of art supplies</option>
+                            <option>Retail of baked goods</option>
+                            <option>Retail of beauty products</option>
+                            <option>Retail of beer</option>
+                            <option>Retail of bicycles</option>
+                            <option>Retail of boat parts</option>
+                            <option>Retail of books</option>
+                            <option>Retail of bottled water</option>
+                            <option>Retail of building materials</option>
+                            <option>Retail of cameras</option>
+                            <option>Retail of camping equipment</option>
+                            <option>Retail of candy</option>
+                            <option>Retail of car accessories</option>
+                            <option>Retail of car parts</option>
+                            <option>Retail of children's clothing</option>
+                            <option>Retail of collectibles</option>
+                            <option>Retail of computer software</option>
+                            <option>Retail of consumer electronics</option>
+                            <option>Retail of cosmetics</option>
+                            <option>Retail of craft supplies</option>
+                            <option>Retail of dairy products</option>
+                            <option>Retail of department store goods</option>
+                            <option>Retail of diesel fuel</option>
+                            <option>Retail of eyeglasses</option>
+                            <option>Retail of fine art</option>
+                            <option>Retail of fireplaces</option>
+                            <option>Retail of fish</option>
+                            <option>Retail of fishing equipment</option>
+                            <option>Retail of floor coverings</option>
+                            <option>Retail of flowers</option>
+                            <option>Retail of footwear</option>
+                            <option>Retail of fresh produce</option>
+                            <option>Retail of furniture</option>
+                            <option>Retail of garden supplies</option>
+                            <option>Retail of gasoline</option>
+                            <option>Retail of gifts</option>
+                            <option>Retail of groceries</option>
+                            <option>Retail of hardware</option>
+                            <option>Retail of health supplements</option>
+                            <option>Retail of hearing aids</option>
+                            <option>Retail of hobby supplies</option>
+                            <option>Retail of home furnishings</option>
+                            <option>Retail of home security systems</option>
+                            <option>Retail of home textiles</option>
+                            <option>Retail of hot tubs</option>
+                            <option>Retail of household appliances</option>
+                            <option>Retail of household linens</option>
+                            <option>Retail of hunting gear</option>
+                            <option>Retail of jewelry</option>
+                            <option>Retail of kitchenware</option>
+                            <option>Retail of lawn equipment</option>
+                            <option>Retail of lawnmowers</option>
+                            <option>Retail of leather goods</option>
+                            <option>Retail of lighting fixtures</option>
+                            <option>Retail of liquor</option>
+                            <option>Retail of luggage</option>
+                            <option>Retail of meat</option>
+                            <option>Retail of medical supplies</option>
+                            <option>Retail of men's clothing</option>
+                            <option>Retail of mobile homes</option>
+                            <option>Retail of music</option>
+                            <option>Retail of musical instruments</option>
+                            <option>Retail of musical scores</option>
+                            <option>Retail of new cars</option>
+                            <option>Retail of new computers</option>
+                            <option>Retail of newspapers</option>
+                            <option>Retail of office supplies</option>
+                            <option>Retail of optical goods</option>
+                            <option>Retail of outdoor equipment</option>
+                            <option>Retail of paint</option>
+                            <option>Retail of pet food</option>
+                            <option>Retail of pet supplies</option>
+                            <option>Retail of pharmaceuticals</option>
+                            <option>Retail of potted plants</option>
+                            <option>Retail of recreational vehicles</option>
+                            <option>Retail of refurbished electronics</option>
+                            <option>Retail of saunas</option>
+                            <option>Retail of second-hand clothes</option>
+                            <option>Retail of second-hand furniture</option>
+                            <option>Retail of small appliances</option>
+                            <option>Retail of smoking accessories</option>
+                            <option>Retail of sporting goods</option>
+                            <option>Retail of stationery</option>
+                            <option>Retail of swimming pool supplies</option>
+                            <option>Retail of tires</option>
+                            <option>Retail of tobacco products</option>
+                            <option>Retail of toys</option>
+                            <option>Retail of used cars</option>
+                            <option>Retail of used goods</option>
+                            <option>Retail of video games</option>
+                            <option>Retail of watches</option>
+                            <option>Retail of wine</option>
+                            <option>Retail of women's clothing</option>
+                            <option>Retail Trade (Business-to-Consumer)</option>
+                            <option>Retail via direct selling</option>
+                            <option>Retail via door-to-door sales</option>
+                            <option>Retail via electronic shopping</option>
+                            <option>Retail via mail order</option>
+                            <option>Retail via vending machines</option>
+                            <option>Sawing of lumber</option>
+                            <option>Security guard services</option>
+                            <option>Security system monitoring</option>
+                            <option>Senior citizen centers</option>
+                            <option>Ski resort operations</option>
+                            <option>Stamping of metal</option>
+                            <option>Trading in printed consumables</option>
+                            <option>Trading of agricultural raw materials</option>
+                            <option>Trading of Agrochemicals</option>
+                            <option>Trading of Alcohol</option>
+                            <option>Trading of Analytical equipment</option>
+                            <option>Trading of animal feed</option>
+                            <option>Trading of antique furniture</option>
+                            <option>Trading of Apparels</option>
+                            <option>Trading of auto components</option>
+                            <option>Trading of automobile parts</option>
+                            <option>Trading of bakery goods</option>
+                            <option>Trading of bottled water</option>
+                            <option>Trading of Catalysts</option>
+                            <option>Trading of Chemical</option>
+                            <option>Trading of Chemical Additives</option>
+                            <option>Trading of cleaning products</option>
+                            <option>Trading of coatings and dye</option>
+                            <option>Trading of commercial aircraft</option>
+                            <option>Trading of Computer products</option>
+                            <option>Trading of computer software</option>
+                            <option>Trading of confectionery</option>
+                            <option>Trading of dairy products</option>
+                            <option>Trading of farm machinery</option>
+                            <option>Trading of fine art</option>
+                            <option>Trading of fire extinguishers</option>
+                            <option>Trading of footwear</option>
+                            <option>Trading of fresh produce</option>
+                            <option>Trading of Hardware</option>
+                            <option>Trading of hobby goods</option>
+                            <option>Trading of home appliances</option>
+                            <option>Trading of industrial engines</option>
+                            <option>Trading of leather goods</option>
+                            <option>Trading of liquefied gas</option>
+                            <option>Trading of live plants</option>
+                            <option>Trading of lubricants</option>
+                            <option>Trading of lumber products</option>
+                            <option>Trading of machinery parts</option>
+                            <option>Trading of magazines</option>
+                            <option>Trading of mining machinery</option>
+                            <option>Trading of new tires</option>
+                            <option>Trading of office furniture</option>
+                            <option>Trading of office supplies</option>
+                            <option>Trading of optical goods</option>
+                            <option>Trading of packaging materials</option>
+                            <option>Trading of Paints</option>
+                            <option>Trading of paper products</option>
+                            <option>Trading of personal care products</option>
+                            <option>Trading of pharmaceuticals</option>
+                            <option>Trading of piece goods</option>
+                            <option>Trading of plumbing supplies</option>
+                            <option>Trading of Posts</option>
+                            <option>Trading of precious metals</option>
+                            <option>Trading of professional supplies</option>
+                            <option>Trading of railroad equipment</option>
+                            <option>Trading of raw tobacco</option>
+                            <option>Trading of recorded media</option>
+                            <option>Trading of Recreation and database</option>
+                            <option>Trading of refrigeration units</option>
+                            <option>Trading of seafood</option>
+                            <option>Trading of security systems</option>
+                            <option>Trading of Software Products</option>
+                            <option>Trading of sporting goods</option>
+                            <option>Trading of tools</option>
+                            <option>Trading of Transport equipment</option>
+                            <option>Trading of Turbo Systems</option>
+                            <option>Trading of twine</option>
+                            <option>Trading of uniforms</option>
+                            <option>Trading of used equipment</option>
+                            <option>Trading of Valves</option>
+                            <option>Trading of waste products</option>
+                            <option>Trading of Water heaters</option>
+                            <option>Trading of wind turbines</option>
+                            <option>Trading products</option>
+                            <option>Treating of wood</option>
+                            <option>Weaving of carpets</option>
+                            <option>Wholesale of adhesives</option>
+                            <option>Wholesale of alcoholic beverages</option>
+                            <option>Wholesale of apparel</option>
+                            <option>Wholesale of bakery ingredients</option>
+                            <option>Wholesale of books</option>
+                            <option>Wholesale of chemicals</option>
+                            <option>Wholesale of commercial scales</option>
+                            <option>Wholesale of communication equipment</option>
+                            <option>Wholesale of computer hardware</option>
+                            <option>Wholesale of construction materials</option>
+                            <option>Wholesale of crafts supplies</option>
+                            <option>Wholesale of drugs</option>
+                            <option>Wholesale of electric motors</option>
+                            <option>Wholesale of electrical goods</option>
+                            <option>Wholesale of fabricated metals</option>
+                            <option>Wholesale of fertilizers</option>
+                            <option>Wholesale of fire alarms</option>
+                            <option>Wholesale of fresh flowers</option>
+                            <option>Wholesale of frozen foods</option>
+                            <option>Wholesale of fuel oil</option>
+                            <option>Wholesale of furniture</option>
+                            <option>Wholesale of grain</option>
+                            <option>Wholesale of grocery products</option>
+                            <option>Wholesale of heating equipment</option>
+                            <option>Wholesale of industrial equipment</option>
+                            <option>Wholesale of industrial robots</option>
+                            <option>Wholesale of jewelry</option>
+                            <option>Wholesale of laboratory supplies</option>
+                            <option>Wholesale of luggage</option>
+                            <option>Wholesale of meat products</option>
+                            <option>Wholesale of medical equipment</option>
+                            <option>Wholesale of musical instruments</option>
+                            <option>Wholesale of newspapers</option>
+                            <option>Wholesale of notions</option>
+                            <option>Wholesale of paper towels</option>
+                            <option>Wholesale of pet food</option>
+                            <option>Wholesale of photographic equipment</option>
+                            <option>Wholesale of rare collectibles</option>
+                            <option>Wholesale of raw coffee</option>
+                            <option>Wholesale of recyclable materials</option>
+                            <option>Wholesale of ropes</option>
+                            <option>Wholesale of safety equipment</option>
+                            <option>Wholesale of secondhand books</option>
+                            <option>Wholesale of seeds</option>
+                            <option>Wholesale of ships</option>
+                            <option>Wholesale of solar panels</option>
+                            <option>Wholesale of specialty foods</option>
+                            <option>Wholesale of surgical instruments</option>
+                            <option>Wholesale of toys</option>
+                            <option>Wholesale of used goods</option>
+                        </select>
+                        <p class="text-muted small mt-2">Note: This is a curated list. For the comprehensive list of 300+ specific categories, please contact us at admin@gulftp.com.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary">Describe the transaction <span class="text-danger">*</span></label>
+                        <textarea class="form-control premium-textarea" rows="5" placeholder="Please provide details about the transaction..." required></textarea>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="termsAgreeSearch" required>
+                        <label class="form-check-label text-secondary" for="termsAgreeSearch">
+                            I agree to the GulfTP <a href="terms-of-use.html" class="text-decoration-none fw-semibold" style="color: var(--primary-orange);">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    
+                    <h5 class="fw-bold text-center mb-4" style="color: var(--primary-orange);">Our Single Benchmarking from Now Just $750</h5>
+
+                    <button type="submit" class="btn btn-lg w-100 fw-bold text-white shadow-sm premium-submit-btn" style="background: linear-gradient(135deg, #08664b, #054834); border: none; padding: 15px 0;">
+                        Book Now <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+
+                    <p class="text-muted small mt-4 text-center">
+                        <i class="fa-solid fa-lock me-1 text-success"></i> All data is meticulously vetted to meet the strictest regulatory standards.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Unique Futuristic Footer -->
+    <footer class="footer position-relative">
+        <!-- Abstract SVG Wave -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L48 10.7C96 21.3 192 42.7 288 53.3C384 64 480 64 576 53.3C672 42.7 768 21.3 864 16C960 10.7 1056 21.3 1152 37.3C1248 53.3 1344 74.7 1392 85.3L1440 96V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="#0b1120"/>
+            </svg>
+        </div>
+        
+        <div class="container position-relative z-index-1">
+            <div class="row pt-5 pb-4 g-5">
+                <!-- Branding and Newsletter -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <a href="index.html" class="d-inline-block mb-4">
+                        <img src="Gulf_TP_Footer_Logo_White.webp" alt="GulfTP" style="height: 55px; object-fit: contain;">
+                    </a>
+                    <p class="pe-lg-5 mb-4 text-light opacity-75">GulfTP is the definitive transfer pricing database for the GCC region, providing reliable data for multinational enterprises and tax professionals.</p>
+                    
+                    <!-- Glowing Newsletter Signup -->
+                    <div class="footer-newsletter mt-4">
+                        <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
+                        <form ng-submit="subscribeNewsletter()" class="position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" ng-model="userEmail" required>
+                            <button class="btn footer-submit-btn" type="submit">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Links Columns -->
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Solutions</h5>
+                    <a href="services-database.html" class="footer-link">Services Database</a>
+                    <a href="interest-rates-database.html" class="footer-link">Interest Rates</a>
+                    <a href="ip-licensing-database.html" class="footer-link">IP Licensing</a>
+                    <a href="gulf-company-database.html" class="footer-link">Gulf Companies</a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <a href="book-search.html" class="footer-link">Book a Search</a>
+                    <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
+                    <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
+                    
+                    <div class="social-icons-modern">
+                        <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gulftp?igsh=b3dybTE2OXFoNnIx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gulf-tp/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    &copy; 2026 GulfTP. All Rights Reserved. Built for the Future.
+                </div>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="mx-2 opacity-50">|</span>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const form = document.getElementById('searchForm');
+    const paymentBtn = document.getElementById('paymentBtn');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    const errorText = document.getElementById('errorText');
+
+    // Get Stripe key from server
+    let stripePublicKey = null;
+
+    // Initialize payment handler
+    async function initializePayment() {
+        try {
+            const response = await fetch('payment-handler.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    firstName: 'init',
+                    email: 'init@test.com',
+                    amount: 750
+                })
+            });
+
+            const result = await response.json();
+            stripePublicKey = result.stripePublicKey;
+        } catch (error) {
+            console.error('Failed to initialize payment:', error);
+        }
+    }
+
+    // Initialize on page load
+    initializePayment();
+
+    paymentBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        
+        // Validate form
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        paymentBtn.disabled = true;
+        paymentBtn.innerHTML = 'Processing...';
+        errorMessage.style.display = 'none';
+        successMessage.style.display = 'none';
+
+        // Get form data
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        data.amount = 750; // $750
+
+        try {
+            // Save to database
+            const response = await fetch('payment-handler.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (!result.success) {
+                throw new Error(result.error || 'Payment initialization failed');
+            }
+
+            // Initialize Stripe with the key from server
+            const stripe = Stripe(result.stripePublicKey);
+
+            // Show success message
+            successMessage.style.display = 'block';
+            paymentBtn.disabled = false;
+            paymentBtn.innerHTML = 'Proceed to Payment - $750 <i class="fa-solid fa-credit-card ms-2"></i>';
+            
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                form.reset();
+                successMessage.style.display = 'none';
+            }, 3000);
+
+        } catch (error) {
+            errorText.textContent = error.message || 'An error occurred. Please try again.';
+            errorMessage.style.display = 'block';
+            paymentBtn.disabled = false;
+            paymentBtn.innerHTML = 'Proceed to Payment - $750 <i class="fa-solid fa-credit-card ms-2"></i>';
+        }
+    });
+</script>
+</body>
+</html>

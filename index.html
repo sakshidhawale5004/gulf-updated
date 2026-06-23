@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gulfApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GulfTP - Transfer Pricing Data</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- New Centralized Styles -->
+    <link rel="stylesheet" href="style.css?v=1780750602">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGY56NN41Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MGY56NN41Z');
+    </script>
+</head>
+
+<body ng-controller="MainController">
+
+    <!-- Top Bar (Conxora Style) -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <ul class="top-info">
+                        <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuristic Navbar (Conxora Style) -->
+    <header class="navbar-custom sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg py-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="GulfTP" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" style="font-weight: 600;">Solutions <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                            <ul class="dropdown-menu" style="min-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="gulf-company-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-building me-3" style="color: #f39223;"></i>Gulf Company Database</a></li>
+                                <li><a class="dropdown-item" href="interest-rates-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-chart-line me-3" style="color: #f39223;"></i>Interest Rates Database</a></li>
+                                <li><a class="dropdown-item" href="services-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-server me-3" style="color: #f39223;"></i>Services Database</a></li>
+                                <li><a class="dropdown-item" href="ip-licensing-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-file-contract me-3" style="color: #f39223;"></i>IP Licensing Database</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">Regulation <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="uae-transfer-pricing.html">United Arab Emirates</a></li>
+                                <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html">Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="qatar-transfer-pricing.html">Qatar</a></li>
+                                <li><a class="dropdown-item" href="bahrain-transfer-pricing.html">Bahrain</a></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html">Egypt</a></li>
+                                <li><a class="dropdown-item" href="oman-transfer-pricing.html">Oman</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex gap-3">
+                    <a href="book-search.html" class="btn-conxora">BOOK SEARCH</a>
+                    <a href="book-an-appointment.html" class="btn-conxora" style="background-color: transparent !important; color: var(--primary-green) !important; border: 1px solid var(--primary-green) !important;">BOOK APPOINTMENT</a>
+                    <a href="#" class="btn-conxora" style="background-color: var(--primary-orange) !important; color: white !important;">BOOK DEMO</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conxora Style Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-badge animate-up"><i class="fa-solid fa-chart-pie me-2"></i> GCC Regional Data</div>
+                    <h1 class="hero-title animate-up delay-1">Unlock Over <br><span class="text-orange">100,000+</span><br> Comparable Companies</h1>
+                    <p class="hero-subtitle animate-up delay-2">GulfTP is the premier transfer pricing benchmarking database built entirely for the GCC region. Elevate your financial strategies with high-precision data.</p>
+                    <div class="hero-buttons animate-up delay-3 d-flex flex-wrap gap-3">
+                        <a href="book-search.html" class="btn-conxora btn-orange px-4 py-3">Request a GCC Benchmark Search</a>
+                        <a href="about.html" class="btn-conxora btn-outline px-4 py-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlapping Action Cards (Conxora Style) -->
+    <section class="action-section">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="conxora-card">
+                        <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h4>Custom Search</h4>
+                        <p>Request a highly targeted, Gulf-Specific benchmark search tailored to your needs.</p>
+                        <a href="book-search.html" class="read-more">Read More <i class="fa-solid fa-angle-right"></i></a>
+                        <div class="card-bg-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="conxora-card active-card">
+                        <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                        <h4>Buy Subscription</h4>
+                        <p>Get full access to our extensive database of regional transfer pricing metrics.</p>
+                        <a href="buy-subscription.html" class="read-more">Read More <i class="fa-solid fa-angle-right"></i></a>
+                        <div class="card-bg-icon"><i class="fa-solid fa-database"></i></div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="conxora-card">
+                        <div class="card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <h4>Book an Appointment</h4>
+                        <p>Schedule a one-on-one consultation with our transfer pricing specialists for expert guidance on your GCC benchmarking needs.</p>
+                        <a href="book-an-appointment.html" class="read-more">Book Now <i class="fa-solid fa-angle-right"></i></a>
+                        <div class="card-bg-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="conxora-card">
+                        <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                        <h4>Update Search</h4>
+                        <p>Refresh your existing benchmark data with the latest available comparables.</p>
+                        <a href="update-a-search.html" class="read-more">Read More <i class="fa-solid fa-angle-right"></i></a>
+                        <div class="card-bg-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company Section (Conxora Style) -->
+    <section class="about-company-section section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-image-wrapper">
+                        <img src="We Provide The Best Transfer Pricing Data in the GCC.webp" alt="Transfer Pricing Data Dashboard" class="img-fluid rounded shadow-lg">
+                        <div class="experience-badge">
+                            <h2>10+</h2>
+                            <p>Years of<br>Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <span class="sub-title"><i class="fa-solid fa-circle-dot me-2"></i> About Our Company</span>
+                        <h2 class="title">We Provide The Best Transfer Pricing Data in the GCC</h2>
+                    </div>
+                    <p class="mb-4 text-muted">GulfTP was created to fill the critical gap in localized transfer pricing data for the Gulf region. We offer robust, verified, and highly relevant comparables for multinational enterprises operating in the Middle East.</p>
+                    
+                    <div class="progress-box mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Data Accuracy</span>
+                            <span class="fw-bold text-orange">100%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-green" role="progressbar" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-box mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Regional Coverage</span>
+                            <span class="fw-bold text-orange">100%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-green" role="progressbar" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <a href="about.html" class="btn-conxora">More About Us <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Homepage Image Section -->
+    <section class="homepage-image-section section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="homepage-image-wrapper">
+                        <img src="homepageimage.webp" alt="Cloud Computing and AI Technology" class="img-fluid rounded shadow-lg" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <span class="sub-title"><i class="fa-solid fa-circle-dot me-2"></i> Advanced Technology</span>
+                        <h2 class="title">Powered by Cutting-Edge Data Analytics</h2>
+                    </div>
+                    <p class="mb-4 text-muted">Our platform provides comprehensive transfer pricing data and analysis tools for the GCC region. We combine verified comparable company data with expert analysis to ensure you have accurate and relevant benchmarking information for your transfer pricing documentation.</p>
+                    
+                    <div class="feature-list mb-4">
+                        <div class="feature-item-inline mb-3">
+                            <i class="fa-solid fa-check-circle me-3" style="color: var(--primary-green); font-size: 1.3rem;"></i>
+                            <span class="fw-bold">Comprehensive Data Processing</span>
+                        </div>
+                        <div class="feature-item-inline mb-3">
+                            <i class="fa-solid fa-check-circle me-3" style="color: var(--primary-green); font-size: 1.3rem;"></i>
+                            <span class="fw-bold">Advanced Analytics Tools</span>
+                        </div>
+                        <div class="feature-item-inline mb-3">
+                            <i class="fa-solid fa-check-circle me-3" style="color: var(--primary-green); font-size: 1.3rem;"></i>
+                            <span class="fw-bold">Secure Cloud Infrastructure</span>
+                        </div>
+                        <div class="feature-item-inline">
+                            <i class="fa-solid fa-check-circle me-3" style="color: var(--primary-green); font-size: 1.3rem;"></i>
+                            <span class="fw-bold">Automated Compliance Reporting</span>
+                        </div>
+                    </div>
+
+                    <a href="buy-subscription.html" class="btn-conxora">Explore Our Solutions <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview (Conxora Style) -->
+    <section class="services-overview-section bg-light section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <div class="section-heading mb-5">
+                        <span class="sub-title"><i class="fa-solid fa-circle-dot me-2"></i> What We Offer</span>
+                        <h2 class="title">Professional Benchmarking Solutions</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-block">
+                        <div class="service-img">
+                            <img src="Services Database.jpg" alt="Services Database" class="img-fluid w-100">
+                        </div>
+                        <div class="service-content">
+                            <h4><a href="services-database.html">Services Database</a></h4>
+                            <p>Access our comprehensive database for intra-group services benchmarking.</p>
+                            <a href="services-database.html" class="service-link"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-block">
+                        <div class="service-img">
+                            <img src="Interest Rates-NEW.jpg" alt="Interest Rates" class="img-fluid w-100">
+                        </div>
+                        <div class="service-content">
+                            <h4><a href="interest-rates-database.html">Interest Rates</a></h4>
+                            <p>Reliable data for intercompany loan benchmarking across the Gulf.</p>
+                            <a href="interest-rates-database.html" class="service-link"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-block">
+                        <div class="service-img">
+                            <img src="IP_Licensing-NEW-12.jpeg" alt="IP Licensing" class="img-fluid w-100">
+                        </div>
+                        <div class="service-content">
+                            <h4><a href="ip-licensing-database.html">IP Licensing</a></h4>
+                            <p>Benchmarking royalties and intellectual property licensing agreements.</p>
+                            <a href="ip-licensing-database.html" class="service-link"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Steps Section -->
+    <section class="process-steps-section section-padding bg-white">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title mb-3">How GulfTP Works</h2>
+                    <p class="section-desc">Follow our simple 4-step process to access comprehensive transfer pricing data for the Gulf region</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h4 class="step-title">Select Your Database</h4>
+                        <p class="step-description">Choose from our four specialized databases: Gulf Companies, Interest Rates, Services, or IP Licensing data tailored to your needs.</p>
+                        <div class="step-connector"></div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
+                        <h4 class="step-title">Apply Filters</h4>
+                        <p class="step-description">Use our advanced filtering tools to narrow down results by industry, company size, location, and other comparability factors.</p>
+                        <div class="step-connector"></div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h4 class="step-title">Analyze Data</h4>
+                        <p class="step-description">Review detailed comparable data with comprehensive financial metrics, transaction rates, and benchmarking analysis tools.</p>
+                        <div class="step-connector"></div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-card">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">
+                            <i class="fa-solid fa-file-export"></i>
+                        </div>
+                        <h4 class="step-title">Export & Report</h4>
+                        <p class="step-description">Generate professional reports and export your findings in multiple formats for your transfer pricing documentation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8 text-center">
+                    <p class="text-muted mb-4">Ready to get started? Choose your preferred option below:</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center">
+                        <a href="book-search.html" class="btn-conxora">Book a Search</a>
+                        <a href="buy-subscription.html" class="btn-conxora btn-orange">Buy Subscription</a>
+                        <a href="book-an-appointment.html" class="btn-conxora btn-outline">BOOK APPOINTMENT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transfer Pricing Implementation Steps Section -->
+    <section class="tp-implementation-section section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Image Column -->
+                <div class="col-lg-5">
+                    <div class="tp-image-wrapper">
+                        <img src="We Provide The Best Transfer Pricing Data in the GCC-2ndimage.webp" alt="Transfer Pricing Professional Analysis" class="img-fluid rounded shadow-lg" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+
+                <!-- Steps Column -->
+                <div class="col-lg-7">
+                    <div class="tp-steps-content">
+                        <h2 class="section-title mb-4">Transfer Pricing Implementation Steps</h2>
+                        <p class="section-desc mb-5">Follow our comprehensive process to ensure compliance and optimize your transfer pricing strategy</p>
+
+                        <div class="tp-steps-list">
+                            <!-- Step 1 -->
+                            <div class="tp-step-item">
+                                <div class="step-badge-small">01</div>
+                                <div class="step-content">
+                                    <h4 class="step-title-small">Identify Transfer Pricing Risks</h4>
+                                    <p class="step-desc-small">Analyze your intercompany transactions and identify potential transfer pricing risks. Assess your current pricing policies against GCC regulations and international standards to determine compliance gaps.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="tp-step-item">
+                                <div class="step-badge-small">02</div>
+                                <div class="step-content">
+                                    <h4 class="step-title-small">Gather Comparable Data</h4>
+                                    <p class="step-desc-small">Access GulfTP's comprehensive database of comparable companies and transactions. Filter by industry, company size, transaction type, and other relevant factors to find the most appropriate benchmarks for your analysis.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="tp-step-item">
+                                <div class="step-badge-small">03</div>
+                                <div class="step-content">
+                                    <h4 class="step-title-small">Conduct Benchmarking Analysis</h4>
+                                    <p class="step-desc-small">Perform detailed statistical analysis using our advanced tools. Compare your transfer prices against market data to establish arm's length pricing and generate supporting documentation for regulatory compliance.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="tp-step-item">
+                                <div class="step-badge-small">04</div>
+                                <div class="step-content">
+                                    <h4 class="step-title-small">Document & Report</h4>
+                                    <p class="step-desc-small">Generate comprehensive transfer pricing documentation and reports. Export findings in multiple formats for tax authority submissions, audit defense, and internal stakeholder communication across the GCC region.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <p class="text-muted mb-4">Need expert guidance? Our transfer pricing specialists are ready to assist you.</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="book-an-appointment.html" class="btn-conxora btn-orange">Schedule Consultation</a>
+                                <a href="book-search.html" class="btn-conxora">Start Your Search</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highest Quality Comparables Data Section -->
+    <section class="comparables-data-section position-relative py-5" style="background: url('IP_Licensing-NEW-12.jpeg') center/cover no-repeat; min-height: 600px;">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.15); z-index: 1;"></div>
+        <div class="container position-relative py-5" style="z-index: 2;">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white mb-4" style="font-size: 2.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Highest Quality Comparables Data</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-white p-4 rounded-4 shadow-lg h-100 d-flex flex-column" style="border: 1px solid rgba(8,102,75,0.1);">
+                        <div class="mb-3" style="color: #e8612c; font-size: 2.5rem;">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h6 class="fw-bold mb-3" style="color: #08664b; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">High Quality Data</h6>
+                        <p class="text-secondary mb-0" style="font-weight: 500;">High-quality comparables for your in-depth benchmarking analysis</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-white p-4 rounded-4 shadow-lg h-100 d-flex flex-column" style="border: 1px solid rgba(8,102,75,0.1);">
+                        <div class="mb-3" style="color: #e8612c; font-size: 2.5rem;">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h6 class="fw-bold mb-3" style="color: #08664b; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">All-in-one Platform</h6>
+                        <p class="text-secondary mb-0" style="font-weight: 500;">User-friendly database for smart data analysis</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-white p-4 rounded-4 shadow-lg h-100 d-flex flex-column" style="border: 1px solid rgba(8,102,75,0.1);">
+                        <div class="mb-3" style="color: #e8612c; font-size: 2.5rem;">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h6 class="fw-bold mb-3" style="color: #08664b; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">Tailored Pricing</h6>
+                        <p class="text-secondary mb-0" style="font-weight: 500;">Client-oriented pricing that removes limitations</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-white p-4 rounded-4 shadow-lg h-100 d-flex flex-column" style="border: 1px solid rgba(8,102,75,0.1);">
+                        <div class="mb-3" style="color: #e8612c; font-size: 2.5rem;">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h6 class="fw-bold mb-3" style="color: #08664b; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">Proactive Support</h6>
+                        <p class="text-secondary mb-0" style="font-weight: 500;">Get one-on-one support from our experts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Fun Facts (Conxora Style) -->
+    <section class="fun-facts-section">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6">
+                    <div class="fact-item">
+                        <i class="fa-solid fa-building"></i>
+                        <h2 class="counter">100,000+</h2>
+                        <p>Companies Profiled</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="fact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <h2 class="counter">6</h2>
+                        <p>GCC Countries</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="fact-item">
+                        <i class="fa-solid fa-users"></i>
+                        <h2 class="counter">100+</h2>
+                        <p>Comparable Companies</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="fact-item">
+                        <i class="fa-solid fa-award"></i>
+                        <h2 class="counter">100%</h2>
+                        <p>Data Accuracy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-hero py-5 position-relative" style="background: url('IP_Licensing-NEW-12.jpeg') center/cover no-repeat; border-top: 15px solid var(--primary-green); min-height: 500px; display: flex; align-items: center;">
+        <!-- Dark overlay for text readability -->
+        <div style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.62); z-index: 1;"></div>
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-white text-start mx-auto" style="max-width: 700px;">
+                        <h2 class="fw-bold mb-3" style="font-size: 2.8rem; text-shadow: 0 2px 8px rgba(0,0,0,0.7);">Newsletter</h2>
+                        <p class="mb-4" style="font-size: 1.15rem; text-shadow: 0 1px 4px rgba(0,0,0,0.7);">Get the latest market updates.<br>Subscribe to our Newsletter today!</p>
+                        
+                        <form ng-submit="subscribeNewsletter()">
+                            <div class="d-flex flex-column gap-3">
+                                <input type="email" class="form-control p-3 rounded-0 border-0" placeholder="Enter your email" ng-model="userEmail" required style="max-width: 600px; background: rgba(255,255,255,0.95); color: #333;">
+                                <button type="submit" class="btn rounded-0 align-self-start px-5 py-2 fw-bold text-white" style="background-color: #08664b; border: none; font-size: 1rem;">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section py-5 bg-white">
+        <div class="container py-5 text-center">
+            <h2 class="section-title mb-5" style="color: var(--primary-green); font-family: 'TT Commons Pro', sans-serif;">What Our Clients Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner pb-5">
+                    <!-- Carousel Item 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm p-4 text-start" style="border-radius: 15px; background: var(--bg-light);">
+                                    <div class="text-warning mb-3">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="fst-italic text-dark mb-4" style="font-size: 0.95rem; line-height: 1.6;">
+                                        "GulfTP has been a game-changer for our transfer pricing compliance process. Their platform made documentation simple, efficient, and highly professional."
+                                    </p>
+                                    <div class="mt-auto">
+                                        <h6 class="fw-bold mb-0" style="color: #08664b;">Group Tax Manager</h6>
+                                        <small class="text-muted">Middle East Energy Company</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <div class="card h-100 border-0 shadow-sm p-4 text-start" style="border-radius: 15px; background: var(--bg-light);">
+                                    <div class="text-warning mb-3">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="fst-italic text-dark mb-4" style="font-size: 0.95rem; line-height: 1.6;">
+                                        "The insights provided helped us identify potential risk areas and strengthen our intercompany pricing policies. Highly recommended!"
+                                    </p>
+                                    <div class="mt-auto">
+                                        <h6 class="fw-bold mb-0" style="color: #08664b;">Finance Director</h6>
+                                        <small class="text-muted">Global Retail LLC</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <div class="card h-100 border-0 shadow-sm p-4 text-start" style="border-radius: 15px; background: var(--bg-light);">
+                                    <div class="text-warning mb-3">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="fst-italic text-dark mb-4" style="font-size: 0.95rem; line-height: 1.6;">
+                                        "An absolute necessity for any business operating in the GCC region. The benchmark accuracy is unmatched."
+                                    </p>
+                                    <div class="mt-auto">
+                                        <h6 class="fw-bold mb-0" style="color: #08664b;">Senior TP Advisor</h6>
+                                        <small class="text-muted">Tech Solutions Arabia</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel Item 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm p-4 text-start" style="border-radius: 15px; background: var(--bg-light);">
+                                    <div class="text-warning mb-3">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="fst-italic text-dark mb-4" style="font-size: 0.95rem; line-height: 1.6;">
+                                        "Data quality is exceptional and their dedicated support team always assists promptly with tailored solutions."
+                                    </p>
+                                    <div class="mt-auto">
+                                        <h6 class="fw-bold mb-0" style="color: #08664b;">Chief Financial Officer</h6>
+                                        <small class="text-muted">Oman Manufacturing Co</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <div class="card h-100 border-0 shadow-sm p-4 text-start" style="border-radius: 15px; background: var(--bg-light);">
+                                    <div class="text-warning mb-3">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="fst-italic text-dark mb-4" style="font-size: 0.95rem; line-height: 1.6;">
+                                        "Seamless experience from data collection to documentation. GulfTP simplified what used to be a very complex task for us."
+                                    </p>
+                                    <div class="mt-auto">
+                                        <h6 class="fw-bold mb-0" style="color: #08664b;">Tax Compliance Manager</h6>
+                                        <small class="text-muted">Logistics Group UAE</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <div class="card h-100 border-0 shadow-sm p-4 text-start" style="border-radius: 15px; background: var(--bg-light);">
+                                    <div class="text-warning mb-3">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="fst-italic text-dark mb-4" style="font-size: 0.95rem; line-height: 1.6;">
+                                        "We tried several databases, but GulfTP's regional focus makes it the clear winner for our GCC operations."
+                                    </p>
+                                    <div class="mt-auto">
+                                        <h6 class="fw-bold mb-0" style="color: #08664b;">Partner</h6>
+                                        <small class="text-muted">Accounting Firm KSA</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" style="bottom: 0;">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: var(--primary-green); width: 12px; height: 12px; border-radius: 50%;"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: var(--primary-green); width: 12px; height: 12px; border-radius: 50%;"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Futuristic Footer -->
+    <footer class="footer position-relative">
+        <!-- Abstract SVG Wave -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L48 10.7C96 21.3 192 42.7 288 53.3C384 64 480 64 576 53.3C672 42.7 768 21.3 864 16C960 10.7 1056 21.3 1152 37.3C1248 53.3 1344 74.7 1392 85.3L1440 96V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="var(--primary-green)"/>
+            </svg>
+        </div>
+        
+        <div class="container position-relative z-index-1">
+            <div class="row pt-5 pb-4 g-5">
+                <!-- Branding and Newsletter -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <a href="index.html" class="d-inline-block mb-4">
+                        <img src="Gulf_TP_Footer_Logo_White.webp" alt="GulfTP" style="height: 55px; object-fit: contain;">
+                    </a>
+                    <p class="pe-lg-5 mb-4 text-light opacity-75">GulfTP is the definitive transfer pricing database for the GCC region, providing reliable data for multinational enterprises and tax professionals.</p>
+                    
+                    <!-- Glowing Newsletter Signup -->
+                    <div class="footer-newsletter mt-4">
+                        <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
+                        <form ng-submit="subscribeNewsletter()" class="position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" ng-model="userEmail" required>
+                            <button class="btn footer-submit-btn" type="submit">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Links Columns -->
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Solutions</h5>
+                    <a href="services-database.html" class="footer-link">Services Database</a>
+                    <a href="interest-rates-database.html" class="footer-link">Interest Rates</a>
+                    <a href="ip-licensing-database.html" class="footer-link">IP Licensing</a>
+                    <a href="gulf-company-database.html" class="footer-link">Gulf Companies</a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <a href="book-search.html" class="footer-link">Book a Search</a>
+                    <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
+                    <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
+                    
+                    <div class="social-icons-modern">
+                        <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gulftp?igsh=b3dybTE2OXFoNnIx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gulf-tp/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    &copy; 2026 GulfTP. All Rights Reserved. Built for the Future.
+                </div>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="mx-2 opacity-50">|</span>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        var app = angular.module('gulfApp', []);
+        app.controller('MainController', function($scope, $timeout) {
+            $scope.userEmail = '';
+            $scope.subscriptionSuccess = false;
+
+            $scope.subscribeNewsletter = function() {
+                if ($scope.userEmail) {
+                    $scope.subscriptionSuccess = true;
+                    $scope.userEmail = '';
+                    $timeout(function() {
+                        $scope.subscriptionSuccess = false;
+                    }, 4000);
+                }
+            };
+        });
+    </script>
+</body>
+
+</html>

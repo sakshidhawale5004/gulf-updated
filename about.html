@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gulfApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GulfTP - About Us</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    /* ── Custom Dropdown Arrow ── */
+.navbar-nav .nav-link.dropdown-toggle::after {
+    display: none;
+}
+.navbar-nav .nav-link.dropdown-toggle .dd-arrow {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+    transition: transform 0.28s ease;
+}
+.navbar-nav .nav-link.dropdown-toggle .dd-arrow svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+}
+.navbar-nav .nav-item.dropdown.show > .nav-link .dd-arrow {
+    transform: rotate(180deg);
+}
+.hero-banner {
+    background: linear-gradient(rgba(10, 107, 79, 0.78), rgba(5, 55, 38, 0.92)),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920') no-repeat center center / cover;
+    position: relative;
+    padding: 110px 0;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+.hero-overlay { display: none; }
+.hero-content { position: relative; z-index: 2; }
+.hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    margin-bottom: 0.5rem;
+}
+.hero-breadcrumb {
+    font-size: 1rem;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+}
+</style>
+</head>
+<body ng-controller="AboutController">
+
+    <!-- Top Bar (Conxora Style) -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <ul class="top-info">
+                        <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
+                        <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuristic Navbar (Conxora Style) -->
+    <header class="navbar-custom sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg py-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="GulfTP" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #f39223; font-weight: 700; font-size: 1.1rem;">Solutions <span class="dd-arrow"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><polyline points="2,4 6,8 10,4"/></svg></span></a>
+                            <ul class="dropdown-menu" style="min-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="gulf-company-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-building me-3" style="color: #f39223;"></i>Gulf Company Database</a></li>
+                                <li><a class="dropdown-item" href="interest-rates-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-chart-line me-3" style="color: #f39223;"></i>Interest Rates Database</a></li>
+                                <li><a class="dropdown-item" href="services-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-server me-3" style="color: #f39223;"></i>Services Database</a></li>
+                                <li><a class="dropdown-item" href="ip-licensing-database.html" style="padding: 12px 20px; font-size: 1rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-file-contract me-3" style="color: #f39223;"></i>IP Licensing Database</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regulation <span class="dd-arrow"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><polyline points="2,4 6,8 10,4"/></svg></span></a>
+                            <ul class="dropdown-menu" style="min-width: 260px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: none; border-radius: 8px; padding: 12px 0;">
+                                <li><a class="dropdown-item" href="uae-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>United Arab Emirates</a></li>
+                                <li><a class="dropdown-item" href="saudi-arabia-transfer-pricing-benchmarking.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Kingdom of Saudi Arabia</a></li>
+                                <li><a class="dropdown-item" href="qatar-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Qatar</a></li>
+                                <li><a class="dropdown-item" href="bahrain-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Bahrain</a></li>
+                                <li><a class="dropdown-item" href="oman-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Oman</a></li>
+                                <li><a class="dropdown-item" href="egypt-transfer-pricing.html" style="padding: 10px 20px; font-size: 0.95rem; color: #0a6b4f; font-weight: 500;"><i class="fa-solid fa-flag me-3" style="color: #f39223;"></i>Egypt</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex gap-3">
+                    <a href="book-search.html" class="btn-conxora">Book Search</a>
+                    <a href="book-an-appointment.html" class="btn-conxora" style="background-color: transparent !important; color: var(--primary-green) !important; border: 1px solid var(--primary-green) !important;">Book Appointment</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">About</h1>
+            <p class="hero-breadcrumb">Home - About</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+    <!-- Storytelling Section 1 -->
+    <section class="story-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="story-text-box">
+                        <h2 class="mb-4" style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2.5rem;">GCC Transfer Pricing Comparables You Can Trust</h2>
+                        <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">GulfTP provides verified, regulation-compliant comparable company data across the GCC region. Our database enables transfer pricing professionals to support robust benchmarking studies and defend positions with tax authorities.</p>
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2"></i> Verified GCC comparable company data for benchmarking</li>
+                            <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2"></i> Regulation-compliant across UAE, Saudi Arabia, Qatar, Bahrain, Oman, and Egypt</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="story-image-box">
+                        <div class="story-icon-badge">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <img src="Gulf Company Database-final1234 The Gold Standard in Data.webp" alt="GCC Transfer Pricing Comparables Database">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storytelling Section 2 -->
+    <section class="story-section">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-lg-row-reverse">
+                <div class="col-lg-6">
+                    <div class="story-text-box border-0" style="background: transparent; box-shadow: none;">
+                        <h2 class="mb-4" style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2.5rem;">Expert Support for Your Transfer Pricing Needs</h2>
+                        <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">Our transfer pricing specialists provide direct support to help you navigate GCC regulations and build defensible benchmarking studies. We offer transparent pricing and personalized guidance for each engagement.</p>
+                        <div class="d-flex gap-3 mt-4">
+                            <a href="book-an-appointment.html" class="btn-futuristic">Request a GCC Benchmark Search</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="story-image-box">
+                        <div class="story-icon-badge orange-badge">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000" alt="Tailored Pricing">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section" style="padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2.5rem; margin-bottom: 1rem; color: #333;">Our Purpose</h2>
+                    <p style="font-size: 1rem; color: #666; line-height: 1.8;">Discover what drives GulfTP and our vision for the future of transfer pricing</p>
+                </div>
+            </div>
+
+            <!-- Toggle Buttons -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <div style="display: flex; gap: 0; background: #e8e8e8; border-radius: 50px; padding: 4px; position: relative;">
+                        <button ng-click="activeTab = 'mission'" ng-class="{'active': activeTab === 'mission'}" style="flex: 1; padding: 14px 30px; border: none; background: transparent; font-weight: 600; font-size: 1rem; color: #666; cursor: pointer; border-radius: 50px; transition: all 0.3s ease; z-index: 2;" class="mission-btn">
+                            <i class="fa-solid fa-bullseye me-2"></i>Our Mission
+                        </button>
+                        <button ng-click="activeTab = 'vision'" ng-class="{'active': activeTab === 'vision'}" style="flex: 1; padding: 14px 30px; border: none; background: transparent; font-weight: 600; font-size: 1rem; color: #666; cursor: pointer; border-radius: 50px; transition: all 0.3s ease; z-index: 2;" class="vision-btn">
+                            <i class="fa-solid fa-telescope me-2"></i>Our Vision
+                        </button>
+                        <div style="position: absolute; top: 4px; left: 4px; width: calc(50% - 4px); height: calc(100% - 8px); background: linear-gradient(135deg, #0a6b4f 0%, #08664b 100%); border-radius: 50px; transition: all 0.3s ease; z-index: 1;" ng-class="{'vision-active': activeTab === 'vision'}" class="toggle-slider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Panels -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Mission Panel -->
+                    <div ng-show="activeTab === 'mission'" style="animation: fadeIn 0.5s ease;">
+                        <div style="background: white; padding: 50px 40px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-left: 5px solid #0a6b4f;">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8">
+                                    <h3 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2rem; margin-bottom: 20px; color: #0a6b4f;">Defensible Transfer Pricing for the GCC</h3>
+                                    <p style="font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 20px;">
+                                        We provide the verified comparable data and expert guidance needed to support robust transfer pricing documentation across the GCC region. Our mission is to help multinational enterprises and tax professionals navigate regional regulations with confidence.
+                                    </p>
+                                    <ul style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="margin-bottom: 12px; font-size: 0.95rem; color: #666;"><i class="fa-solid fa-check-circle" style="color: #0a6b4f; margin-right: 12px;"></i>Verified comparable company data across 6 GCC countries</li>
+                                        <li style="margin-bottom: 12px; font-size: 0.95rem; color: #666;"><i class="fa-solid fa-check-circle" style="color: #0a6b4f; margin-right: 12px;"></i>Regulation-compliant benchmarking support</li>
+                                        <li style="font-size: 0.95rem; color: #666;"><i class="fa-solid fa-check-circle" style="color: #0a6b4f; margin-right: 12px;"></i>Direct expert guidance for each engagement</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #0a6b4f 0%, #08664b 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                        <i class="fa-solid fa-bullseye" style="font-size: 3rem; color: white;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vision Panel -->
+                    <div ng-show="activeTab === 'vision'" style="animation: fadeIn 0.5s ease;">
+                        <div style="background: white; padding: 50px 40px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-left: 5px solid #f39223;">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8">
+                                    <h3 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2rem; margin-bottom: 20px; color: #f39223;">The Trusted GCC Transfer Pricing Partner</h3>
+                                    <p style="font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 20px;">
+                                        To be the most trusted provider of verified GCC transfer pricing data and benchmarking support. We are committed to delivering reliable, regulation-compliant comparable data that helps businesses build defensible transfer pricing positions.
+                                    </p>
+                                    <ul style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="margin-bottom: 12px; font-size: 0.95rem; color: #666;"><i class="fa-solid fa-check-circle" style="color: #f39223; margin-right: 12px;"></i>Specialized GCC transfer pricing expertise</li>
+                                        <li style="margin-bottom: 12px; font-size: 0.95rem; color: #666;"><i class="fa-solid fa-check-circle" style="color: #f39223; margin-right: 12px;"></i>Verified, regulation-compliant data</li>
+                                        <li style="font-size: 0.95rem; color: #666;"><i class="fa-solid fa-check-circle" style="color: #f39223; margin-right: 12px;"></i>Direct support from transfer pricing professionals</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #f39223 0%, #f5a623 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                        <i class="fa-solid fa-telescope" style="font-size: 3rem; color: white;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mission-btn.active,
+        .vision-btn.active {
+            color: white !important;
+        }
+
+        .toggle-slider {
+            transition: left 0.3s ease;
+        }
+
+        .toggle-slider.vision-active {
+            left: calc(50% + 4px) !important;
+        }
+    </style>
+
+    <!-- Service Experience Standard Section -->
+    <section class="section-padding" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2.2rem; margin-bottom: 1rem;">What We Deliver</h2>
+                    <p class="text-muted" style="font-size: 1rem; line-height: 1.8;">GulfTP provides verified comparable company data and expert support to help transfer pricing professionals build defensible benchmarking studies across the GCC region.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="service-card" style="background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; height: 100%; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a6b4f 0%, #08664b 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="fa-solid fa-database" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 12px; color: #333;">Verified Comparable Data</h4>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0;">GCC-specific comparable company data verified for transfer pricing benchmarking studies.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-5">
+                    <div class="service-card" style="background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; height: 100%; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a6b4f 0%, #08664b 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="fa-solid fa-layer-group" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 12px; color: #333;">Regulation-Compliant</h4>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0;">Data aligned with GCC transfer pricing regulations and documentation requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-5">
+                    <div class="service-card" style="background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; height: 100%; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a6b4f 0%, #08664b 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="fa-solid fa-chart-line" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 12px; color: #333;">Transparent Pricing</h4>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0;">Clear, straightforward pricing for GCC benchmark searches starting at $750.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-5">
+                    <div class="service-card" style="background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; height: 100%; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0a6b4f 0%, #08664b 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="fa-solid fa-headset" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 12px; color: #333;">Expert Guidance</h4>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0;">Direct support from transfer pricing professionals for each engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orange Banner Section -->
+    <section style="background: linear-gradient(135deg, #f39223 0%, #f5a623 100%); padding: 60px 0; color: white;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3 style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.8rem; margin-bottom: 10px;">Ready to Strengthen Your Transfer Pricing Position?</h3>
+                    <p style="font-size: 1rem; line-height: 1.6; margin: 0; opacity: 0.95;">Get verified GCC comparable data and expert guidance for your benchmarking study.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-4 mt-md-0">
+                    <a href="book-search.html" style="background-color: white; color: #f39223; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease; border: 2px solid white;">
+                        Request a GCC Benchmark Search
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section with Animated Counters -->
+    <section class="stats-banner" style="background: linear-gradient(135deg, #0a6b4f 0%, #053726 50%, #1a1a1a 100%); padding: 100px 0; color: white; position: relative; overflow: hidden;">
+        <!-- Decorative Background Elements -->
+        <div style="position: absolute; top: 0; right: -100px; width: 400px; height: 400px; background: rgba(243, 146, 35, 0.1); border-radius: 50%; filter: blur(80px);"></div>
+        <div style="position: absolute; bottom: -50px; left: -100px; width: 300px; height: 300px; background: rgba(10, 107, 79, 0.2); border-radius: 50%; filter: blur(80px);"></div>
+        
+        <div class="container position-relative z-index-1">
+            <div class="row align-items-center">
+                <!-- Title Section -->
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h2 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2.8rem; margin-bottom: 0; line-height: 1.2;">We Provide<br><span style="color: #f39223;">Gulf Data</span></h2>
+                    <p style="font-size: 1rem; opacity: 0.8; margin-top: 16px; line-height: 1.7;">Comprehensive transfer pricing data covering the Middle East &amp; North Africa region.</p>
+                    
+                    <!-- Country Grid -->
+                    <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Kingdom of Saudi Arabia</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">United Arab Emirates</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Qatar</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Kuwait</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Bahrain</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Oman</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Yemen</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Iraq</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Iran</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Jordan</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Syria</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Lebanon</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Palestine</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Turkey</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 9px 14px; grid-column: span 2; max-width: 48%;">
+                            <i class="fa-solid fa-flag" style="color: #f39223; font-size: 0.8rem; flex-shrink:0;"></i>
+                            <span style="font-size: 0.82rem; font-weight: 600; opacity: 0.95;">Egypt</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stats Grid -->
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <!-- Stat 1: Comparables Data -->
+                        <div class="col-md-6">
+                            <div style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); padding: 40px 30px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                <div style="font-size: 3.5rem; font-weight: 800; color: #f39223; margin-bottom: 12px; font-family: 'Outfit', sans-serif;">
+                                    <span class="counter" data-target="100000">100,000</span><span style="font-size: 2.5rem;">+</span>
+                                </div>
+                                <div style="font-size: 1rem; font-weight: 600; opacity: 0.95;">Comparable Companies</div>
+                                <p style="font-size: 0.85rem; opacity: 0.75; margin-top: 8px; margin-bottom: 0;">Verified GCC transfer pricing data</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Stat 2: Countries Covered -->
+                        <div class="col-md-6">
+                            <div style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); padding: 40px 30px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                <div style="font-size: 3.5rem; font-weight: 800; color: #f39223; margin-bottom: 12px; font-family: 'Outfit', sans-serif;">
+                                    <span class="counter" data-target="15">15</span>
+                                </div>
+                                <div style="font-size: 1rem; font-weight: 600; opacity: 0.95;">Countries Covered</div>
+                                <p style="font-size: 0.85rem; opacity: 0.75; margin-top: 8px; margin-bottom: 0;">GCC, Levant, North Africa &amp; Beyond</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <a href="buy-subscription.html" class="action-card">
+                                <i class="fa-solid fa-arrow-trend-up action-icon"></i>
+                                <h5>Get a Search</h5>
+                                <p>Make a request for a Gulf-Specific Custom Search.</p>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="update-a-search.html" class="action-card">
+                                <i class="fa-solid fa-arrow-trend-up action-icon"></i>
+                                <h5>Update a Search</h5>
+                                <p>Update your broad Regional (Europe / Asia) search with Gulf Specific Comparables.</p>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="book-an-appointment.html" class="action-card">
+                                <i class="fa-solid fa-arrow-trend-up action-icon"></i>
+                                <h5>Book an Appointment</h5>
+                                <p>It's time to get your Gulf Transfer Pricing right. Let's Talk.</p>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="buy-subscription.html" class="action-card">
+                                <i class="fa-solid fa-arrow-trend-up action-icon"></i>
+                                <h5>Buy Subscription</h5>
+                                <p>Future-proof your transfer pricing strategy with endless insights. It's not just a subscription; it's a strategic advantage.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="our-values-section section-padding bg-white">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title mb-3" style="font-size: 2.5rem;">Our Values</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">Built on integrity, delivered with efficiency. We are committed to providing accessible, affordable, and expert transfer pricing solutions to businesses across the Gulf region.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Value 1: Integrity -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h5>Integrity</h5>
+                        <p>We drive companies forward by balancing sustainability with certainty to emerge stronger. Our commitment to ethical practices ensures trust and reliability in every engagement.</p>
+                    </div>
+                </div>
+
+                <!-- Value 2: Efficiency -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h5>Efficiency</h5>
+                        <p>We empower businesses to make informed decisions and imagine new possibilities. Our streamlined processes and expert tools deliver results quickly without compromising quality.</p>
+                    </div>
+                </div>
+
+                <!-- Value 3: Transparency -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h5>Transparency</h5>
+                        <p>We align people with the organization's aspirations to foster innovative approaches and drive leadership. Clear communication and open dialogue guide all our interactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose GulfTP - Benefits Section -->
+    <section class="why-choose-section section-padding" style="background: linear-gradient(135deg, #0a5f47 0%, #08664b 100%); color: white;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4" style="color: white; font-size: 2.5rem;">Why Choose GulfTP?</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">GulfTP is the premier transfer pricing database specifically designed for the Gulf region. We provide comprehensive, high-quality data and tools to empower your transfer pricing analysis.</p>
+                    <a href="book-an-appointment.html" class="btn-conxora" style="background-color: var(--primary-orange); border-color: var(--primary-orange);">Get In Touch</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <!-- Benefit 1 -->
+                        <div class="col-md-6">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <h5 style="color: white; font-weight: 700; margin-bottom: 10px;">100% Control Of Your Business</h5>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">Full control and ownership of your transfer pricing analysis with a local partner in most sectors.</p>
+                            </div>
+                        </div>
+                        <!-- Benefit 2 -->
+                        <div class="col-md-6">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <h5 style="color: white; font-weight: 700; margin-bottom: 10px;">Get Access To A Global Market</h5>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">Strategic access connecting Europe, Asia, and Africa for international trade opportunities.</p>
+                            </div>
+                        </div>
+                        <!-- Benefit 3 -->
+                        <div class="col-md-6">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <h5 style="color: white; font-weight: 700; margin-bottom: 10px;">Fast Company Setup</h5>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">Quick and efficient transfer pricing analysis and benchmarking in many jurisdictions.</p>
+                            </div>
+                        </div>
+                        <!-- Benefit 4 -->
+                        <div class="col-md-6">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">
+                                    <i class="fa-solid fa-shield"></i>
+                                </div>
+                                <h5 style="color: white; font-weight: 700; margin-bottom: 10px;">Complete Confidentiality & Privacy</h5>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">Strong legal protections for your business and personal information with secure data handling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="our-services-section section-padding bg-light" style="padding-top: 120px; padding-bottom: 120px;">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Image Column -->
+                <div class="col-lg-5">
+                    <div class="solution-image-wrapper">
+                        <img src="about.imagestarting1.jpg?v=2" alt="The Gold Standard in Data" class="img-fluid rounded shadow-lg" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="col-lg-7">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-12">
+                            <span class="sub-title"><i class="fa-solid fa-circle-dot me-2"></i> Our Solutions</span>
+                            <h2 class="section-title mb-3">Comprehensive Transfer Pricing Solutions</h2>
+                            <p class="section-desc">We provide specialized databases and tools for comprehensive transfer pricing analysis, compliance, and strategic growth across the GCC region.</p>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 justify-content-center">
+                        <!-- Database 1: Gulf Company Database -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <h4 class="solution-title">Gulf Company Database</h4>
+                                <p class="solution-desc">Access comprehensive data on 100,000+ Gulf companies with detailed financial metrics, industry classifications, and transaction information for accurate benchmarking.</p>
+                                <a href="gulf-company-database.html" class="solution-link">Explore <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Database 2: Interest Rates Database -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <h4 class="solution-title">Interest Rates Database</h4>
+                                <p class="solution-desc">Benchmark intercompany loan rates with our comprehensive interest rates database covering multiple GCC jurisdictions and transaction types.</p>
+                                <a href="interest-rates-database.html" class="solution-link">Explore <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Database 3: Services Database -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <h4 class="solution-title">Services Database</h4>
+                                <p class="solution-desc">Analyze intra-group service pricing with our specialized database containing benchmarks for management fees, technical services, and support functions.</p>
+                                <a href="services-database.html" class="solution-link">Explore <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Database 4: IP Licensing Database -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fa-solid fa-file-contract"></i>
+                                </div>
+                                <h4 class="solution-title">IP Licensing Database</h4>
+                                <p class="solution-desc">Benchmark intellectual property licensing agreements and royalty rates with our comprehensive IP licensing database for the GCC region.</p>
+                                <a href="ip-licensing-database.html" class="solution-link">Explore <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-lg-12 text-center">
+                            <p class="text-muted mb-4">Need help choosing the right database for your needs?</p>
+                            <div class="d-flex flex-wrap gap-3 justify-content-center">
+                                <a href="book-an-appointment.html" class="btn-conxora btn-orange">Schedule Consultation</a>
+                                <a href="book-search.html" class="btn-conxora">Start Your Search</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Futuristic Footer -->
+    <footer class="footer position-relative">
+        <!-- Abstract SVG Wave -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L48 10.7C96 21.3 192 42.7 288 53.3C384 64 480 64 576 53.3C672 42.7 768 21.3 864 16C960 10.7 1056 21.3 1152 37.3C1248 53.3 1344 74.7 1392 85.3L1440 96V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="#0b1120"/>
+            </svg>
+        </div>
+        
+        <div class="container position-relative z-index-1">
+            <div class="row pt-5 pb-4 g-5">
+                <!-- Branding and Newsletter -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <a href="index.html" class="d-inline-block mb-4">
+                        <img src="Gulf_TP_Footer_Logo_White.webp" alt="GulfTP" style="height: 55px; object-fit: contain;">
+                    </a>
+                    <p class="pe-lg-5 mb-4 text-light opacity-75">GulfTP is the definitive transfer pricing database for the GCC region, providing reliable data for multinational enterprises and tax professionals.</p>
+                    
+                    <!-- Glowing Newsletter Signup -->
+                    <div class="footer-newsletter mt-4">
+                        <h6 class="text-white mb-3 text-uppercase letter-spacing-1">Join Our Newsletter</h6>
+                        <form ng-submit="subscribeNewsletter()" class="position-relative">
+                            <input type="email" class="form-control footer-input" placeholder="Enter your email address" ng-model="userEmail" required>
+                            <button class="btn footer-submit-btn" type="submit">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Links Columns -->
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Solutions</h5>
+                    <a href="services-database.html" class="footer-link">Services Database</a>
+                    <a href="interest-rates-database.html" class="footer-link">Interest Rates</a>
+                    <a href="ip-licensing-database.html" class="footer-link">IP Licensing</a>
+                    <a href="gulf-company-database.html" class="footer-link">Gulf Companies</a>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <a href="book-search.html" class="footer-link">Book a Search</a>
+                    <a href="buy-subscription.html" class="footer-link">Buy Subscription</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="contact.html" class="footer-link">Contact Us</a>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
+                    <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
+                    
+                    <div class="social-icons-modern">
+                        <a href="https://www.facebook.com/people/Gulf-TP/61578909913545/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gulftp?igsh=b3dybTE2OXFoNnIx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gulf-tp/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    &copy; 2026 GulfTP. All Rights Reserved. Built for the Future.
+                </div>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="mx-2 opacity-50">|</span>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        var app = angular.module('gulfApp', []);
+        
+        // Controller handling the Mission / Vision tabs
+        app.controller('AboutController', function($scope) {
+            $scope.activeTab = 'mission'; // Default to mission
+        });
+
+        // Animated Counter Function
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString();
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Trigger animation when stats section comes into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsSection = document.querySelector('.stats-banner');
+            
+            if (statsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounters();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(statsSection);
+            }
+        });
+    </script>
+</body>
+</html>
