@@ -23,6 +23,7 @@
             color: white;
         }
 </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body ng-controller="SubscriptionController">
 
@@ -30,13 +31,13 @@
     <div class="top-bar d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div data-aos="fade-up" class="col-md-6">
                     <ul class="top-info">
                         <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
                         <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
                     </ul>
                 </div>
-                <div class="col-md-6 text-end">
+                <div data-aos="fade-up" class="col-md-6 text-end">
                     <div class="top-social">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -101,7 +102,7 @@
         </div>
     </header>
 
-    <section class="hero-banner">
+    <section data-aos="fade-up" class="hero-banner">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1 class="hero-title">Buy Subscription</h1>
@@ -162,10 +163,10 @@
                         
                         <form name="subForm" ng-submit="submitForm()" novalidate>
                             <div class="row g-3 mb-3">
-                                <div class="col-md-6">
+                                <div data-aos="fade-up" class="col-md-6">
                                     <input type="text" class="form-control" placeholder="First Name *" ng-model="formData.firstName" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div data-aos="fade-up" class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Last Name *" ng-model="formData.lastName" required>
                                 </div>
                             </div>
@@ -175,10 +176,10 @@
                             </div>
                             
                             <div class="row g-3 mb-3">
-                                <div class="col-md-6">
+                                <div data-aos="fade-up" class="col-md-6">
                                     <input type="email" class="form-control" placeholder="Business Email *" ng-model="formData.email" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div data-aos="fade-up" class="col-md-6">
                                     <select class="form-select" ng-model="formData.users" required>
                                         <option value="" disabled selected hidden>Expected Users *</option>
                                         <option value="1-3">1 - 3 Users</option>
@@ -263,7 +264,7 @@
                 </div>
 
                 <!-- Contact & Socials -->
-                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                <div data-aos="fade-up" class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
                     <h5 class="footer-heading">Contact</h5>
                     <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
                     <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
@@ -327,6 +328,17 @@
                         });
                 }
             };
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
         });
     </script>
 </body>

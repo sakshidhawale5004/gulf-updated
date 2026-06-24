@@ -233,19 +233,20 @@ jQuery(document).ready(function($) {
 
 		</style>
 		<style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">a{color:#05afec;}a:hover{color:#94ca36;}a:active{color:#94ca36;}body{font-weight:normal;font-style:normal;}</style>    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="wp-singular page-template-default page page-id-5816 wp-custom-logo wp-theme-consultio theme-consultio woocommerce-no-js redux-page  site-h12 header-sticky  btn-type-gradient  fixed-footer  mobile-header-light  site-404-default elementor-default elementor-kit-4540 elementor-page elementor-page-5816">
 		<!-- Top Bar (Conxora Style) -->
     <div class="top-bar d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div data-aos="fade-up" class="col-md-6">
                     <ul class="top-info">
                         <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
                         <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
                     </ul>
                 </div>
-                <div class="col-md-6 text-end">
+                <div data-aos="fade-up" class="col-md-6 text-end">
                     <div class="top-social">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -1538,7 +1539,7 @@ To get started, simply follow the steps below. We've made it simple to get a hig
                 </div>
 
                 <!-- Contact & Socials -->
-                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                <div data-aos="fade-up" class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
                     <h5 class="footer-heading">Contact</h5>
                     <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
                     <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
@@ -1801,6 +1802,17 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
   });
 </script>
 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+    </script>
 </body>
 </html>
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body ng-controller="ContactCtrl" class="bg-light">
 
@@ -15,13 +16,13 @@
     <div class="top-bar d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div data-aos="fade-up" class="col-md-6">
                     <ul class="top-info">
                         <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
                         <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
                     </ul>
                 </div>
-                <div class="col-md-6 text-end">
+                <div data-aos="fade-up" class="col-md-6 text-end">
                     <div class="top-social">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -171,7 +172,7 @@
     }
 </style>
 
-<section class="contact-hero">
+<section data-aos="fade-up" class="contact-hero">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-6 pe-lg-5">
@@ -201,34 +202,34 @@
                 
                 <form name="contactForm" ng-submit="submitForm()" novalidate class="contact-form-glass">
                     <div class="row g-3 mb-3">
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <input type="text" class="form-control p-3 glass-input" placeholder="First name *" ng-model="formData.firstName" required>
                         </div>
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <input type="text" class="form-control p-3 glass-input" placeholder="Last name *" ng-model="formData.lastName" required>
                         </div>
                     </div>
                     
                     <div class="row g-3 mb-3">
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <input type="email" class="form-control p-3 glass-input" placeholder="Email address *" ng-model="formData.email" required>
                         </div>
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <input type="tel" class="form-control p-3 glass-input" placeholder="Phone number *" ng-model="formData.phone" required>
                         </div>
                     </div>
 
                     <div class="row g-3 mb-3">
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <input type="tel" class="form-control p-3 glass-input" placeholder="WhatsApp number (optional)" ng-model="formData.whatsapp">
                         </div>
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <input type="text" class="form-control p-3 glass-input" placeholder="Company name *" ng-model="formData.company" required>
                         </div>
                     </div>
 
                     <div class="row g-3 mb-3">
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <select class="form-select p-3 glass-select" ng-model="formData.service" required>
                                 <option value="" disabled selected hidden>Service needed *</option>
                                 <option value="GCC Benchmark Search">GCC Benchmark Search</option>
@@ -238,7 +239,7 @@
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <select class="form-select p-3 glass-select" ng-model="formData.country" required>
                                 <option value="" disabled selected hidden>GCC Country *</option>
                                 <option value="UAE">UAE</option>
@@ -323,7 +324,7 @@
                 </div>
 
                 <!-- Contact & Socials -->
-                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                <div data-aos="fade-up" class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
                     <h5 class="footer-heading">Contact</h5>
                     <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
                     <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
@@ -387,6 +388,17 @@
                         });
                 }
             };
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
         });
     </script>
 </body>

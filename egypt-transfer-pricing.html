@@ -54,6 +54,7 @@
     z-index: 2;
 }
 </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body ng-controller="EgyptController">
 
@@ -61,13 +62,13 @@
     <div class="top-bar d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div data-aos="fade-up" class="col-md-6">
                     <ul class="top-info">
                         <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
                         <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
                     </ul>
                 </div>
-                <div class="col-md-6 text-end">
+                <div data-aos="fade-up" class="col-md-6 text-end">
                     <div class="top-social">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -130,7 +131,7 @@
         </div>
     </header>
 
-        <section class="page-hero">
+        <section data-aos="fade-up" class="page-hero">
         <div class="container">
             <h1>Egypt</h1>
             <div class="breadcrumb-text">
@@ -255,7 +256,7 @@
                 </div>
 
                 <!-- Contact & Socials -->
-                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                <div data-aos="fade-up" class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
                     <h5 class="footer-heading">Contact</h5>
                     <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
                     <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
@@ -301,6 +302,17 @@
                     if(button) button.textContent = '+';
                 });
             }
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
         });
     </script>
 </body>

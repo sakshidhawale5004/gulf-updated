@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <style>
@@ -27,13 +28,13 @@
     <div class="top-bar d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div data-aos="fade-up" class="col-md-6">
                     <ul class="top-info">
                         <li><i class="fa-solid fa-envelope"></i> admin@gulftp.com</li>
                         <li><i class="fa-solid fa-phone"></i> +971 581711600</li>
                     </ul>
                 </div>
-                <div class="col-md-6 text-end">
+                <div data-aos="fade-up" class="col-md-6 text-end">
                     <div class="top-social">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -192,19 +193,19 @@
                 <h3 class="fw-bold mb-4" style="color: var(--primary-green);">Your Details</h3>
                 <form id="appointmentForm" method="POST">
                     <div class="row g-4 mb-4">
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Full Name <span class="text-danger">*</span></label>
                             <input type="text" name="firstName" class="form-control form-control-lg premium-input" placeholder="Your full name" required>
                         </div>
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Email Address <span class="text-danger">*</span></label>
                             <input type="email" name="email" class="form-control form-control-lg premium-input" placeholder="your.email@example.com" required>
                         </div>
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Organisation <span class="text-danger">*</span></label>
                             <input type="text" name="company" class="form-control form-control-lg premium-input" placeholder="Your organisation name" required>
                         </div>
-                        <div class="col-md-6">
+                        <div data-aos="fade-up" class="col-md-6">
                             <label class="form-label fw-semibold" style="color: var(--primary-green) !important;">Mobile Number <span class="text-danger">*</span></label>
                             <input type="tel" name="phone" class="form-control form-control-lg premium-input" placeholder="+971 50 123 4567" required>
                         </div>
@@ -282,7 +283,7 @@
                 </div>
 
                 <!-- Contact & Socials -->
-                <div class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
+                <div data-aos="fade-up" class="col-lg-3 col-md-4 mt-lg-5 pt-lg-4">
                     <h5 class="footer-heading">Contact</h5>
                     <p class="mb-3 footer-contact"><i class="fa-solid fa-envelope me-3"></i> <a href="mailto:admin@gulftp.com">admin@gulftp.com</a></p>
                     <p class="mb-4 footer-contact"><i class="fa-solid fa-phone me-3"></i> +971 581711600</p>
@@ -358,5 +359,16 @@
         });
     });
 </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+    </script>
 </body>
 </html>
