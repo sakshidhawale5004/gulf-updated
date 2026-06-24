@@ -63,7 +63,9 @@ if ($conn->connect_error) {
 }
 
 // Determine form type
-if (isset($data['service']) && isset($data['country'])) {
+if (isset($data['form_type'])) {
+    $form_type = $data['form_type'];
+} elseif (isset($data['service']) && isset($data['country'])) {
     $form_type = 'Contact';
 } elseif (isset($data['users'])) {
     $form_type = 'Subscription';

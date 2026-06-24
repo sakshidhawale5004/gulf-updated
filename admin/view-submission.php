@@ -131,8 +131,12 @@ $formData = json_decode($submission['form_data'], true);
         }
         
         .badge-appointment {
-            background-color: #fff3e7;
-            color: #ff9800;
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+        .badge-demo {
+            background-color: #e3f2fd;
+            color: #0288d1;
         }
         
         .btn-back {
@@ -178,6 +182,7 @@ $formData = json_decode($submission['form_data'], true);
                         $badgeClass = 'badge-contact';
                         if ($type === 'Subscription') $badgeClass = 'badge-subscription';
                         elseif ($type === 'Appointment') $badgeClass = 'badge-appointment';
+                        elseif ($type === 'Demo') $badgeClass = 'badge-demo';
                         ?>
                         <span class="badge-type <?php echo $badgeClass; ?>"><?php echo $type; ?></span>
                     </div>
