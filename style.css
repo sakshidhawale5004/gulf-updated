@@ -18,10 +18,10 @@
     --shadow-glow-orange: 0 10px 25px -5px rgba(245, 145, 32, 0.4);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text-dark); /* text-dark */
     background-color: var(--bg-light);
     overflow-x: hidden;
@@ -29,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -1603,5 +1603,38 @@ section img,
     font-size: 0.95rem;
     color: var(--text-muted);
     line-height: 1.7;
-    margin: 0;
+}
+
+/* --- Premium Motion Effects --- */
+.motion-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.motion-delay-1 { animation-delay: 0.2s; }
+.motion-delay-2 { animation-delay: 0.4s; }
+.motion-delay-3 { animation-delay: 0.6s; }
+.motion-delay-4 { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3D Hero Specifics */
+.hero-3d-wrapper {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.hero-3d-element {
+    transform: translateZ(50px);
+    transition: transform 0.1s ease;
 }
