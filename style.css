@@ -710,6 +710,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 16px;
     backdrop-filter: blur(10px);
 }
+.footer-newsletter h6 {
+    font-weight: 300 !important;
+}
 .footer-input {
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
