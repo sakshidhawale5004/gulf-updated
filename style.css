@@ -986,7 +986,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 .section-padding { padding: 100px 0; }
 .section-heading { margin-bottom: 30px; }
 .sub-title { color: var(--primary-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; display: block; margin-bottom: 10px; }
-.section-heading .title { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.5rem; line-height: 1.2; color: var(--primary-green); }
+.section-heading .title { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.0rem; line-height: 1.2; color: var(--primary-green); }
 .about-image-wrapper { position: relative; padding-right: 30px; padding-bottom: 30px; }
 .experience-badge { position: absolute; bottom: 0; right: 0; background: var(--primary-green); color: white; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 20px 40px rgba(8, 102, 75, 0.3); }
 .experience-badge h2 { font-size: 3.5rem; font-weight: 500; margin: 0; line-height: 1; }
