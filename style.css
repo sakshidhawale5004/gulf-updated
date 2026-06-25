@@ -837,7 +837,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Common Section Styles */
 .section-padding { padding: 80px 0; }
-.section-title { font-weight: 800; font-size: 1.6rem; margin-top: 30px; margin-bottom: 20px; color: var(--primary-green); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.6rem; margin-top: 30px; margin-bottom: 20px; color: var(--primary-green); }
 .sub-heading { color: var(--primary-green); font-weight: 700; font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; }
 .content-body p { font-size: 1rem; color: var(--text-muted); /* text-muted */ line-height: 1.8; margin-bottom: 15px; }
 .content-body ul.bullet-list { list-style-type: none; padding-left: 0; margin-bottom: 20px; }
@@ -983,7 +983,7 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 .section-padding { padding: 100px 0; }
 .section-heading { margin-bottom: 30px; }
 .sub-title { color: var(--primary-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; display: block; margin-bottom: 10px; }
-.section-heading .title { font-weight: 500; font-size: 2.5rem; line-height: 1.2; color: var(--text-dark); }
+.section-heading .title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 2.5rem; line-height: 1.2; color: var(--primary-green); }
 .about-image-wrapper { position: relative; padding-right: 30px; padding-bottom: 30px; }
 .experience-badge { position: absolute; bottom: 0; right: 0; background: var(--primary-green); color: white; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 20px 40px rgba(8, 102, 75, 0.3); }
 .experience-badge h2 { font-size: 3.5rem; font-weight: 500; margin: 0; line-height: 1; }
@@ -1256,9 +1256,9 @@ select.custom-input option { background-color: #ffffff; color: #333333; }
 .service-img img { transition: 0.8s; }
 .service-block:hover .service-img img { transform: scale(1.1); }
 .service-content { padding: 30px; position: relative; }
-.service-content h4 { font-weight: 500; margin-bottom: 15px; }
-.service-content h4 a { color: var(--text-dark); text-decoration: none; transition: 0.3s; }
-.service-content h4 a:hover { color: var(--primary-green); }
+.service-content h4 { font-weight: 700; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif; }
+.service-content h4 a { color: var(--primary-green); text-decoration: none; transition: 0.3s; }
+.service-content h4 a:hover { color: var(--primary-orange); }
 .service-content p { color: var(--text-muted); margin-bottom: 0; }
 .service-link { position: absolute; right: 30px; top: -25px; width: 50px; height: 50px; background: var(--primary-green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.4s; box-shadow: 0 10px 20px rgba(8, 102, 75, 0.3); }
 .service-block:hover .service-link { background: var(--primary-orange); color: white; box-shadow: 0 10px 20px rgba(245, 145, 32, 0.3); }
