@@ -366,6 +366,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Minimal Action Box - Clean Design */
 .action-box-minimal {
     display: block;
+    height: 100%;
     padding: 40px 30px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
